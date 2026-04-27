@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">{{ page.country }}</p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.description }}</p>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow dark">BRAND WINES</p>
+      <h2>{{ page.title }} 酒款</h2>
+    </div>
+
+    {% assign brand_wines = site.wines | where: "brand", page.title %}
+
+    <div class="wine-list-grid">
+      {% for wine in brand_wines %}
+      <a class="wine-list-card" href="{{ wine.url | relative_url }}">
+        <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
+        <div class="wine-list-content">
+          <span>{{ wine.type }}</span>
+          <h4>{{ wine.title }}</h4>
+          <p>{{ wine.year }}・{{ wine.region }}</p>
+          <small>{{ wine.grapes }}</small>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

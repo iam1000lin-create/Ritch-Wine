@@ -1,0 +1,29 @@
+---
+layout: default
+title: "代理品牌｜禮奇酒業"
+description: "禮奇酒業代理美國與法國精品葡萄酒品牌，包含 Bogle、Juggernaut、Schramsberg、Whitehall Lane、Guy Farge 等酒莊。"
+permalink: /brands/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">BRANDS</p>
+    <h1>代理品牌</h1>
+    <p>精選美國與法國酒莊，為企業送禮、餐廳酒單與零售詢問提供穩定且具辨識度的酒款選擇。</p>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="brand-list-grid">
+      {% for brand in site.brands %}
+      <a class="brand-list-card" href="{{ brand.url | relative_url }}">
+        <span>{{ brand.country }}</span>
+        <h2>{{ brand.title }}</h2>
+        <p>{{ brand.region }}</p>
+        <small>{{ brand.description }}</small>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
