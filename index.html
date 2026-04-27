@@ -1,0 +1,169 @@
+---
+layout: default
+title: "美法精品葡萄酒代理"
+description: "禮奇酒業專注美國與法國精品葡萄酒代理，提供企業用酒、餐廳酒單、福委活動與專業品酒合作。"
+permalink: /
+---
+
+<section class="hero-section page-offset">
+  <div class="container hero-content">
+    <p class="eyebrow">LI CHI WINES & SPIRITS</p>
+    <h1>美法精品葡萄酒代理</h1>
+    <p class="hero-copy">
+      禮奇酒業專注於美國與法國精品酒款，服務餐飲通路、企業客戶與專業品酒合作。
+    </p>
+
+    <div class="d-flex gap-3 flex-wrap mt-4">
+      <a href="{{ '/wines/' | relative_url }}" class="btn btn-gold">EXPLORE WINES</a>
+      <a href="{{ '/corporate/' | relative_url }}" class="btn btn-outline-gold">CORPORATE INQUIRY</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-light section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <p class="eyebrow dark">ABOUT</p>
+        <h2>專業代理，為不同場景選擇合適酒款</h2>
+      </div>
+      <div class="col-lg-7">
+        <p class="text-muted-dark">
+          從日常餐酒到企業禮贈，從餐廳酒單到福委活動，禮奇酒業以清楚的酒款風格、穩定的供應與專業建議，協助客戶找到合適的葡萄酒選擇。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark feature-strip">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 feature-item">
+        <strong>USA & FRANCE</strong>
+        <span>美國與法國精品酒款</span>
+      </div>
+      <div class="col-md-4 feature-item">
+        <strong>HOSPITALITY</strong>
+        <span>餐廳酒單與通路合作</span>
+      </div>
+      <div class="col-md-4 feature-item">
+        <strong>CORPORATE</strong>
+        <span>企業用酒與活動規劃</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-light section">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
+      <div>
+        <p class="eyebrow dark">FEATURED BRANDS</p>
+        <h2>代理品牌</h2>
+      </div>
+      <a href="{{ '/brands/' | relative_url }}" class="text-link">View all brands →</a>
+    </div>
+
+    <div class="row g-4">
+      {% for brand in site.brands limit:4 %}
+      <div class="col-md-6 col-lg-3">
+        <a class="brand-card d-block" href="{{ brand.url | relative_url }}">
+          <div class="brand-card-body">
+            <span class="card-kicker">{{ brand.country }}</span>
+            <h3>{{ brand.title }}</h3>
+            <p>{{ brand.region }}</p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-dark section">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
+      <div>
+        <p class="eyebrow">WINE PORTFOLIO</p>
+        <h2>精選酒款</h2>
+      </div>
+      <a href="{{ '/wines/' | relative_url }}" class="btn btn-outline-gold">VIEW ALL WINES</a>
+    </div>
+
+    <div class="row g-4">
+      {% for wine in site.wines limit:4 %}
+      <div class="col-md-6 col-lg-3">
+        <a class="wine-card d-block" href="{{ wine.url | relative_url }}">
+          <div class="wine-card-img" style="background-image: url('{{ wine.image | relative_url }}');"></div>
+          <div class="wine-card-body">
+            <span class="card-kicker">{{ wine.brand }}</span>
+            <h3>{{ wine.title }}</h3>
+            <p>{{ wine.type }}・{{ wine.region }}</p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-light section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <p class="eyebrow dark">CORPORATE</p>
+        <h2>企業合作</h2>
+        <p class="text-muted-dark">
+          為企業送禮、福委活動、餐酒會與餐廳酒單提供專業酒款建議。
+        </p>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <a class="service-card d-block" href="{{ '/corporate/' | relative_url }}">
+              <div class="service-card-body">
+                <span class="card-kicker">GIFT</span>
+                <h3>企業送禮</h3>
+                <p>依照預算、對象與場合規劃酒款組合。</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a class="service-card d-block" href="{{ '/corporate/' | relative_url }}">
+              <div class="service-card-body">
+                <span class="card-kicker">RESTAURANT</span>
+                <h3>餐廳酒單</h3>
+                <p>協助餐飲通路建立穩定且有辨識度的酒單。</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-4">
+            <a class="service-card d-block" href="{{ '/corporate/' | relative_url }}">
+              <div class="service-card-body">
+                <span class="card-kicker">EVENT</span>
+                <h3>品酒活動</h3>
+                <p>適合福委、企業聚會與主題式餐酒活動。</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-dark section">
+  <div class="container text-center">
+    <p class="eyebrow">CONTACT</p>
+    <h2>洽詢企業合作與酒款資訊</h2>
+    <p class="text-muted-soft mt-3">
+      歡迎餐飲通路、企業客戶與活動單位聯繫禮奇酒業。
+    </p>
+    <a href="{{ '/contact/' | relative_url }}" class="btn btn-gold mt-4">CONTACT US</a>
+  </div>
+</section>

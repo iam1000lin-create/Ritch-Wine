@@ -1,0 +1,28 @@
+title: "禮奇酒業"
+description: "美法精品葡萄酒代理，提供企業用酒、餐廳酒單、福委活動與專業品酒合作。"
+url: "https://iam1000lin.github.io"
+baseurl: "/li-chi-wines"
+
+collections:
+  wines:
+    output: true
+    permalink: /wines/:name/
+  brands:
+    output: true
+    permalink: /brands/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: wines
+    values:
+      layout: wine
+  - scope:
+      path: ""
+      type: brands
+    values:
+      layout: brand
