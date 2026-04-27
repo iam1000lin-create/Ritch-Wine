@@ -1,0 +1,80 @@
+---
+layout: default
+title: "送禮紅酒推薦｜不知道怎麼選？這裡幫你挑好"
+description: "送禮紅酒怎麼選？整理適合送禮的紅酒、白酒與氣泡酒，讓你不踩雷又體面。"
+permalink: /gifts/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">GIFT GUIDE</p>
+    <h1>送禮，不用再猜要買哪一瓶</h1>
+    <p>
+      不確定對方喜歡什麼？  
+      這裡幫你整理好幾種「安全又有質感」的選擇。
+    </p>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+
+    <h2>送禮選酒的三個原則</h2>
+
+    <div class="card-grid three">
+      <div class="info-card">
+        <h3>不要太極端</h3>
+        <p>太酸或太重口味的酒，反而容易讓對方不習慣。</p>
+      </div>
+
+      <div class="info-card">
+        <h3>品牌要有辨識度</h3>
+        <p>選擇知名或有故事的酒莊，看起來更有價值感。</p>
+      </div>
+
+      <div class="info-card">
+        <h3>外觀很重要</h3>
+        <p>酒標、瓶型與整體感受，會影響第一印象。</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>我們會推薦的送禮酒</h2>
+    </div>
+
+    <div class="wine-list-grid">
+
+      {% for wine in site.wines limit:6 %}
+      <a class="wine-list-card" href="{{ wine.url | relative_url }}">
+        <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
+        <div class="wine-list-content">
+          <span>{{ wine.brand }}</span>
+          <h4>{{ wine.title }}</h4>
+          <p>{{ wine.type }}・{{ wine.region }}</p>
+        </div>
+      </a>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="section-heading">
+      <h2>還是不確定怎麼選？</h2>
+      <p>
+        直接告訴我們你的預算、送禮對象與場合，  
+        我們會幫你選一瓶不會出錯的酒。
+      </p>
+      <a href="{{ '/contact/' | relative_url }}" class="btn-primary">詢問推薦</a>
+    </div>
+  </div>
+</section>
