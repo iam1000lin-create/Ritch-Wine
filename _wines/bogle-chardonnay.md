@@ -6,7 +6,7 @@ type: "白酒"
 region: "California, Clarksburg AVA"
 grapes: "100% Chardonnay"
 alcohol: "14.5%"
-image: "/Ritch-Wine/assets/images/wines/bogle-chardonnay.png"
+image: "/assets/images/wines/bogle-chardonnay.png"
 
 tasting: "白桃、蘋果與淡淡橡木香氣，口感圓潤滑順，酸度平衡。"
 pairing: "海鮮、白肉、奶油義大利麵"
