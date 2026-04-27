@@ -1,0 +1,76 @@
+---
+layout: default
+title: "一個人喝的葡萄酒推薦｜放鬆、追劇、下班後怎麼選？"
+description: "一個人喝葡萄酒怎麼選？整理適合下班放鬆、追劇、獨處與日常小酌的紅酒、白酒與氣泡酒選擇。"
+permalink: /solo/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">SOLO WINE GUIDE</p>
+    <h1>一個人喝酒，不需要理由</h1>
+    <p>
+      下班後、追劇時、想安靜一下的晚上，
+      選一瓶不需要太用力、但會讓心情變好的酒。
+    </p>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+    <h2>一個人喝酒的三個選擇方向</h2>
+
+    <div class="card-grid three">
+      <div class="info-card">
+        <h3>不要太厚重</h3>
+        <p>一個人喝時，太濃厚或太高酒精感的酒容易疲累，建議選擇輕鬆、果香明顯的風格。</p>
+      </div>
+
+      <div class="info-card">
+        <h3>開瓶壓力要低</h3>
+        <p>選擇容易入口、不需要複雜醒酒的酒款，更適合日常放鬆。</p>
+      </div>
+
+      <div class="info-card">
+        <h3>跟心情搭配</h3>
+        <p>想放鬆可選白酒或柔順紅酒；想有儀式感，可選氣泡酒。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">RECOMMENDED</p>
+      <h2>適合一個人慢慢喝的酒</h2>
+      <p>適合下班、追劇、獨處與日常小酌。</p>
+    </div>
+
+    <div class="wine-list-grid">
+      {% for wine in site.wines limit:6 %}
+      <a class="wine-list-card" href="{{ wine.url | relative_url }}">
+        <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
+        <div class="wine-list-content">
+          <span>{{ wine.brand }}</span>
+          <h4>{{ wine.title }}</h4>
+          <p>{{ wine.type }}・{{ wine.region }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="section-heading">
+      <h2>想找一瓶適合今晚的酒？</h2>
+      <p>
+        告訴我們你喜歡清爽、甜美、濃郁或柔順的風格，
+        我們可以協助推薦適合日常小酌的酒款。
+      </p>
+      <a href="{{ '/contact/' | relative_url }}" class="btn-primary">詢問推薦</a>
+    </div>
+  </div>
+</section>
