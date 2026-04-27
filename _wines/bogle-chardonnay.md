@@ -6,7 +6,7 @@ type: "白酒"
 region: "California, Clarksburg AVA"
 grapes: "100% Chardonnay"
 alcohol: "14.5%"
-image: "/assets/images/wines/bogle-chardonnay.png"
+image: "/assets/images/wines/BO-CH.png"
 
 price: "NT$1,080"
 retail_price: "建議售價 NT$1,080"
