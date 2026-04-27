@@ -1,14 +1,15 @@
 :root {
-  --black: #090909;
-  --charcoal: #151311;
-  --deep-brown: #211812;
-  --cream: #f3eee6;
-  --warm-white: #fffaf2;
+  --black: #080807;
+  --charcoal: #11100e;
+  --brown: #1c1510;
+  --cream: #f4efe7;
+  --paper: #fbf7ef;
   --gold: #c8a66a;
-  --muted-gold: #9b7a45;
-  --text-dark: #25201b;
-  --text-muted: #8f867b;
+  --gold-dark: #8f6d38;
+  --text: #26211c;
+  --muted: #9b9186;
   --line: rgba(200, 166, 106, 0.28);
+  --white-line: rgba(255, 255, 255, 0.12);
 }
 
 * {
@@ -23,7 +24,7 @@ body {
   margin: 0;
   background: var(--black);
   color: var(--cream);
-  font-family: "Noto Serif TC", "Noto Serif", Georgia, serif;
+  font-family: "Noto Serif TC", "Times New Roman", serif;
   line-height: 1.8;
 }
 
@@ -41,312 +42,293 @@ main {
   min-height: 70vh;
 }
 
+.container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
 /* NAV */
 
 .site-nav {
-  background: rgba(9, 9, 9, 0.88);
-  backdrop-filter: blur(14px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(8, 8, 7, 0.92);
+  backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
-  padding-top: 14px;
-  padding-bottom: 14px;
 }
 
-.navbar-toggler {
-  border: 1px solid var(--line);
-}
-
-.navbar-toggler-icon {
-  filter: invert(1);
+.nav-inner {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .brand-mark {
+  display: inline-block;
   line-height: 1.1;
-  letter-spacing: 0.12em;
 }
 
 .brand-title {
   display: block;
   color: var(--gold);
   font-size: 1.35rem;
+  letter-spacing: 0.22em;
   font-weight: 600;
 }
 
 .brand-subtitle {
   display: block;
+  margin-top: 6px;
   color: var(--cream);
-  font-size: 0.64rem;
-  letter-spacing: 0.22em;
-  margin-top: 4px;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
 }
 
-.site-nav .nav-link {
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.nav-links a {
   color: var(--cream);
   font-size: 0.78rem;
-  letter-spacing: 0.16em;
-  opacity: 0.86;
+  letter-spacing: 0.18em;
+  opacity: 0.84;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-.site-nav .nav-link:hover {
+.nav-links a:hover {
   color: var(--gold);
   opacity: 1;
 }
 
-/* COMMON */
-
-.page-offset {
-  padding-top: 96px;
-}
-
-.section-dark {
-  background: linear-gradient(135deg, #090909 0%, #1a1510 100%);
-  color: var(--cream);
-}
-
-.section-light {
-  background: var(--cream);
-  color: var(--text-dark);
-}
-
-.section {
-  padding: 96px 0;
-}
-
-.eyebrow {
-  color: var(--gold);
-  letter-spacing: 0.2em;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-
-.eyebrow.dark {
-  color: var(--muted-gold);
-}
-
-h1, h2, h3, h4, h5 {
-  letter-spacing: 0.06em;
-  font-weight: 500;
-}
-
-h1 {
-  font-size: clamp(2.6rem, 5vw, 5.2rem);
-  line-height: 1.18;
-}
-
-h2 {
-  font-size: clamp(1.9rem, 3vw, 3rem);
-  line-height: 1.35;
-}
-
-p {
-  color: inherit;
-}
-
-.text-muted-soft {
-  color: #cfc4b7;
-}
-
-.text-muted-dark {
-  color: var(--text-muted);
-}
-
-.btn-gold,
-.btn-outline-gold {
-  border-radius: 0;
-  letter-spacing: 0.14em;
-  padding: 0.8rem 1.5rem;
-  font-size: 0.82rem;
-}
-
-.btn-gold {
-  background: var(--gold);
-  color: var(--black);
-  border: 1px solid var(--gold);
-}
-
-.btn-gold:hover {
-  background: #d9b878;
-  border-color: #d9b878;
-  color: var(--black);
-}
-
-.btn-outline-gold {
-  color: var(--gold);
-  border: 1px solid var(--gold);
-  background: transparent;
-}
-
-.btn-outline-gold:hover {
-  background: var(--gold);
-  color: var(--black);
+.nav-toggle {
+  display: none;
 }
 
 /* HERO */
 
 .hero-section {
-  position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 92px);
   display: flex;
   align-items: center;
   background:
-    linear-gradient(90deg, rgba(9, 9, 9, 0.96) 0%, rgba(9, 9, 9, 0.72) 48%, rgba(9, 9, 9, 0.3) 100%),
-    url("/assets/images/hero/hero-wine.jpg") center / cover no-repeat;
+    radial-gradient(circle at 72% 34%, rgba(200,166,106,0.16), transparent 34%),
+    linear-gradient(90deg, rgba(8,8,7,0.98), rgba(8,8,7,0.82), rgba(8,8,7,0.56)),
+    url("/Ritch-Wine/assets/images/hero/hero-wine.jpg") center / cover no-repeat;
+  border-bottom: 1px solid var(--line);
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 0.22em;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.eyebrow.dark {
+  color: var(--gold-dark);
+}
+
+.hero-section h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(2.6rem, 5vw, 5.4rem);
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  font-weight: 500;
 }
 
 .hero-copy {
-  max-width: 560px;
-  color: #d4c9bc;
-  margin-top: 24px;
+  max-width: 640px;
+  margin-top: 28px;
+  color: #d5cabe;
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+/* BUTTONS */
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 13px 24px;
+  border-radius: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  transition: all 0.24s ease;
+}
+
+.btn-primary {
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  color: var(--black);
+}
+
+.btn-primary:hover {
+  background: #dbbd7c;
+  border-color: #dbbd7c;
+}
+
+.btn-secondary {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+.btn-secondary:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.text-link {
+  color: var(--gold-dark);
+  letter-spacing: 0.08em;
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 104px 0;
+}
+
+.section-light {
+  background: var(--cream);
+  color: var(--text);
+}
+
+.section-dark {
+  background:
+    radial-gradient(circle at 18% 20%, rgba(200,166,106,0.08), transparent 32%),
+    linear-gradient(135deg, #080807, #17120e);
+  color: var(--cream);
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 44px;
+}
+
+.section-heading.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-heading.split {
+  max-width: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3.2vw, 3.3rem);
+  line-height: 1.32;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.section-heading p {
+  margin-top: 18px;
+  color: inherit;
+  opacity: 0.78;
 }
 
 /* CARDS */
 
-.wine-card,
-.brand-card,
-.service-card {
-  height: 100%;
-  background: var(--warm-white);
-  color: var(--text-dark);
-  border: 1px solid rgba(0,0,0,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.wine-card:hover,
-.brand-card:hover,
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.16);
-  border-color: rgba(200,166,106,0.7);
-}
-
-.wine-card-img {
-  height: 260px;
-  background: #eee5d8 center / contain no-repeat;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.wine-card-body,
-.brand-card-body,
-.service-card-body {
-  padding: 24px;
-}
-
-.card-kicker {
-  display: block;
-  color: var(--muted-gold);
-  letter-spacing: 0.16em;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.wine-card h3,
-.brand-card h3,
-.service-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 10px;
-}
-
-.wine-card p,
-.brand-card p,
-.service-card p {
-  color: #71675c;
-  font-size: 0.92rem;
-  margin-bottom: 0;
-}
-
-/* FEATURE STRIP */
-
-.feature-strip {
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.feature-item {
-  padding: 28px 0;
-}
-
-.feature-item strong {
-  display: block;
-  color: var(--gold);
-  letter-spacing: 0.12em;
-  font-size: 0.82rem;
-  margin-bottom: 6px;
-}
-
-.feature-item span {
-  color: #d4c9bc;
-}
-
-/* WINE DETAIL */
-
-.wine-hero {
-  background: radial-gradient(circle at 24% 40%, #2b2118 0%, #0b0b0a 58%);
-  color: var(--cream);
-}
-
-.wine-bottle-stage {
-  min-height: 560px;
-  background: rgba(255,255,255,0.045);
-  border: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-}
-
-.wine-bottle-img {
-  max-height: 480px;
-  object-fit: contain;
-}
-
-.wine-subtitle {
-  color: #d5c9ba;
-  font-size: 1.05rem;
-}
-
-.wine-spec-grid {
+.card-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card-grid.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.info-card {
+  background: var(--paper);
+  color: var(--text);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 32px;
+  min-height: 240px;
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+.info-card span {
+  display: block;
+  color: var(--gold-dark);
+  letter-spacing: 0.16em;
+  font-size: 0.76rem;
+  margin-bottom: 30px;
+}
+
+.info-card h3,
+.dark-card h3 {
+  margin: 0 0 14px;
+  font-size: 1.45rem;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+.info-card p {
+  color: #6d6358;
+}
+
+.dark-card {
+  background: rgba(255,255,255,0.045);
+  border: 1px solid var(--white-line);
+  padding: 32px;
+  min-height: 240px;
+  transition: transform 0.24s ease, border-color 0.24s ease;
+}
+
+.dark-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200,166,106,0.55);
+}
+
+.dark-card p {
+  color: #cfc3b6;
+}
+
+/* BRANDS */
+
+.brand-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
 
-.wine-spec-grid div {
-  border-top: 1px solid var(--line);
-  padding-top: 16px;
-}
-
-.wine-spec-grid span {
-  display: block;
-  color: var(--gold);
-  font-size: 0.74rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.wine-spec-grid strong {
-  display: block;
-  margin-top: 6px;
-  font-weight: 400;
+.brand-item {
+  background: var(--black);
   color: var(--cream);
-}
-
-.use-case-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.use-case-list span {
   border: 1px solid var(--line);
-  color: var(--gold);
-  padding: 10px 18px;
-  letter-spacing: 0.08em;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 0.18em;
+  font-size: 0.92rem;
 }
 
 /* FOOTER */
@@ -361,6 +343,7 @@ p {
 .site-footer h4,
 .site-footer h5 {
   color: var(--gold);
+  letter-spacing: 0.08em;
 }
 
 .site-footer p {
@@ -392,106 +375,32 @@ p {
 
 /* RESPONSIVE */
 
-@media (max-width: 991px) {
-  .site-nav .nav-link {
-    text-align: left;
-    padding: 12px 0;
+@media (max-width: 900px) {
+  .nav-inner {
+    height: auto;
+    min-height: 82px;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px 0;
+  }
+
+  .nav-links {
+    margin-top: 18px;
+    gap: 18px;
+    flex-wrap: wrap;
   }
 
   .hero-section {
-    min-height: 82vh;
+    min-height: auto;
+    padding: 96px 0;
   }
 
-  .section {
-    padding: 72px 0;
-  }
-
-  .wine-spec-grid {
+  .card-grid.three,
+  .brand-row {
     grid-template-columns: 1fr;
   }
 
-  .wine-bottle-stage {
-    min-height: 420px;
+  .section-heading.split {
+    display: block;
   }
-}
-
-.hero {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #0f1412, #1c2721);
-  color: #fff;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  color: #cfd8d3;
-  max-width: 600px;
-  margin: 0 auto 30px;
-}
-
-.section {
-  padding: 80px 20px;
-}
-
-.section.alt {
-  background: #f7f7f7;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  margin: 10px;
-  border-radius: 999px;
-  text-decoration: none;
-}
-
-.btn.primary {
-  background: #2e7d5b;
-  color: #fff;
-}
-
-.btn.secondary {
-  border: 1px solid #ccc;
-  color: #333;
-}
-
-.brands .brand {
-  padding: 20px;
-  text-align: center;
-  background: #111;
-  color: #fff;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-.muted {
-  color: #777;
 }
