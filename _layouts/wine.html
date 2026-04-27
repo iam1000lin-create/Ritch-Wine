@@ -1,0 +1,92 @@
+---
+layout: default
+---
+
+<section class="wine-detail-hero">
+  <div class="container">
+    <div class="wine-detail-grid">
+      <div class="wine-visual">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.brand }} {{ page.title }} {{ page.type }}">
+      </div>
+
+      <div class="wine-info">
+        <p class="eyebrow">{{ page.brand }}</p>
+        <h1>{{ page.title }}</h1>
+        <p class="wine-lead">
+          {{ page.year }}・{{ page.type }}・{{ page.region }}
+        </p>
+
+        <div class="wine-specs">
+          <div>
+            <span>Vintage</span>
+            <strong>{{ page.year }}</strong>
+          </div>
+          <div>
+            <span>Type</span>
+            <strong>{{ page.type }}</strong>
+          </div>
+          <div>
+            <span>Region</span>
+            <strong>{{ page.region }}</strong>
+          </div>
+          <div>
+            <span>Varietal</span>
+            <strong>{{ page.grapes }}</strong>
+          </div>
+          <div>
+            <span>Alcohol</span>
+            <strong>{{ page.alcohol }}</strong>
+          </div>
+        </div>
+
+        <div class="wine-actions">
+          <a href="{{ '/contact/' | relative_url }}" class="btn-primary">洽詢酒款</a>
+          <a href="{{ '/wines/' | relative_url }}" class="btn-secondary">返回酒款列表</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="wine-content-grid">
+      <div>
+        <p class="eyebrow dark">TASTING NOTES</p>
+        <h2>風味描述</h2>
+        <p>{{ page.tasting }}</p>
+      </div>
+
+      <div>
+        <p class="eyebrow dark">PAIRING</p>
+        <h2>餐酒搭配</h2>
+        <p>{{ page.pairing }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">INQUIRY</p>
+      <h2>適合企業送禮與零售詢問</h2>
+      <p>
+        若您正在尋找企業贈禮、節慶禮盒、餐會用酒或個人送禮酒款，歡迎聯繫禮奇酒業取得建議。
+      </p>
+      <a href="{{ '/contact/' | relative_url }}" class="btn-primary">聯絡我們</a>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "{{ page.title }}",
+  "brand": "{{ page.brand }}",
+  "category": "{{ page.type }}",
+  "description": "{{ page.tasting | strip_html }}",
+  "image": "{{ site.url }}{{ site.baseurl }}{{ page.image }}"
+}
+</script>
