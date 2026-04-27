@@ -696,3 +696,35 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+/* CORPORATE */
+
+.corporate-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.corporate-points div {
+  background: rgba(255,255,255,0.04);
+  padding: 32px;
+}
+
+.corporate-points strong {
+  display: block;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+}
+
+.corporate-points span {
+  color: #d5cabe;
+}
+
+@media (max-width: 900px) {
+  .corporate-points {
+    grid-template-columns: 1fr;
+  }
+}
