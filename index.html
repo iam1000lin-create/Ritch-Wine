@@ -1,21 +1,22 @@
 ---
 layout: default
-title: "企業送禮葡萄酒｜禮奇酒業"
-description: "禮奇酒業提供高端企業送禮葡萄酒選品，服務企業客戶贈禮、節慶禮盒、餐廳酒單與零售酒款詢問。"
+title: "禮奇酒業｜葡萄酒選品"
+description: "從送禮、聚餐到日常放鬆，提供適合各種情境的葡萄酒選擇。"
 permalink: /
 ---
 
 <section class="hero-section">
   <div class="container">
-    <p class="eyebrow">LI CHI WINES & SPIRITS</p>
-    <h1>為重要客戶，選一瓶拿得出手的酒</h1>
+    <p class="eyebrow">RITCH WINES</p>
+    <h1>今天，你想喝哪一種心情？</h1>
     <p class="hero-copy">
-      禮奇酒業專注企業送禮與高端葡萄酒選品，從客戶贈禮、節慶禮盒到品牌合作，提供真正能代表企業形象的酒款建議。
+      從送禮、聚餐到一個人的夜晚，
+      我們幫你選一瓶剛剛好的酒。
     </p>
 
     <div class="hero-actions">
-      <a href="{{ '/contact/' | relative_url }}" class="btn-primary">企業禮贈洽詢</a>
-      <a href="{{ '/wines/' | relative_url }}" class="btn-secondary">查看酒款</a>
+      <a href="{{ '/wines/' | relative_url }}" class="btn-primary">看看酒款</a>
+      <a href="{{ '/contact/' | relative_url }}" class="btn-secondary">詢問推薦</a>
     </div>
   </div>
 </section>
@@ -23,29 +24,22 @@ permalink: /
 <section class="section section-light">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow dark">CORPORATE GIFTING</p>
-      <h2>企業送禮解決方案</h2>
-      <p>依照預算、對象與場合，協助企業挑選有質感、穩定且拿得出手的葡萄酒。</p>
+      <p class="eyebrow dark">FEATURED</p>
+      <h2>精選酒款</h2>
+      <p>從經典到特色，挑幾支我們真的會推薦的。</p>
     </div>
 
-    <div class="card-grid three">
-      <div class="info-card">
-        <span>01</span>
-        <h3>重要客戶贈禮</h3>
-        <p>適合高階客戶、合作夥伴與長期往來對象，強調體面、品牌感與品質穩定。</p>
-      </div>
-
-      <div class="info-card">
-        <span>02</span>
-        <h3>節慶禮盒規劃</h3>
-        <p>中秋、春節、開幕與年度贈禮，提供適合企業採購的酒款搭配建議。</p>
-      </div>
-
-      <div class="info-card">
-        <span>03</span>
-        <h3>企業活動用酒</h3>
-        <p>餐會、VIP活動、品牌招待與內部聚會，依活動調性搭配紅酒、白酒與氣泡酒。</p>
-      </div>
+    <div class="wine-list-grid">
+      {% for wine in site.wines limit:4 %}
+      <a class="wine-list-card" href="{{ wine.url | relative_url }}">
+        <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
+        <div class="wine-list-content">
+          <span>{{ wine.brand }}</span>
+          <h4>{{ wine.title }}</h4>
+          <p>{{ wine.type }}・{{ wine.region }}</p>
+        </div>
+      </a>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -53,25 +47,24 @@ permalink: /
 <section class="section section-dark">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow">WINE DIRECTION</p>
-      <h2>精選酒款方向</h2>
-      <p>以企業送禮與高端零售詢問為核心，提供不同場合可採用的選酒方向。</p>
+      <p class="eyebrow">BY MOMENT</p>
+      <h2>用情境選酒</h2>
     </div>
 
     <div class="card-grid three">
       <div class="dark-card">
-        <h3>高端紅酒</h3>
-        <p>適合重要客戶、長官致贈與高階宴席，重視酒標形象、產區辨識度與口感接受度。</p>
+        <h3>送禮</h3>
+        <p>不確定怎麼選？這裡都是安全又體面的選擇。</p>
       </div>
 
       <div class="dark-card">
-        <h3>精品氣泡酒</h3>
-        <p>適合慶祝、開幕、節慶與儀式感場合，視覺效果佳，也更容易被收禮者記住。</p>
+        <h3>聚餐</h3>
+        <p>朋友聚會、家人吃飯，適合多數人口味的酒款。</p>
       </div>
 
       <div class="dark-card">
-        <h3>大量採購選品</h3>
-        <p>兼顧預算、品質與穩定供貨，適合企業節慶禮盒與員工福利使用。</p>
+        <h3>一個人的夜晚</h3>
+        <p>輕鬆、舒服、不需要理由的酒。</p>
       </div>
     </div>
   </div>
@@ -81,10 +74,10 @@ permalink: /
   <div class="container">
     <div class="section-heading split">
       <div>
-        <p class="eyebrow dark">FEATURED BRANDS</p>
-        <h2>代理品牌</h2>
+        <p class="eyebrow dark">BRANDS</p>
+        <h2>我們代理的酒莊</h2>
       </div>
-      <a href="{{ '/brands/' | relative_url }}" class="text-link">View all brands →</a>
+      <a href="{{ '/brands/' | relative_url }}" class="text-link">全部品牌 →</a>
     </div>
 
     <div class="brand-row">
@@ -99,12 +92,13 @@ permalink: /
 <section class="section section-dark">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow">RETAIL INQUIRY</p>
-      <h2>零售酒款詢問</h2>
+      <p class="eyebrow">CORPORATE</p>
+      <h2>企業送禮與活動用酒</h2>
       <p>
-        若為個人送禮、聚餐、餐酒搭配或特殊場合用酒，也歡迎聯繫我們取得酒款建議。
+        若有企業採購、節慶禮盒或活動需求，
+        也可由我們協助選酒與搭配。
       </p>
-      <a href="{{ '/contact/' | relative_url }}" class="btn-primary">聯絡我們</a>
+      <a href="{{ '/corporate/' | relative_url }}" class="btn-primary">企業洽詢</a>
     </div>
   </div>
 </section>
