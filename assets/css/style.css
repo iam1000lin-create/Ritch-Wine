@@ -796,3 +796,50 @@ main {
     grid-template-columns: 1fr;
   }
 }
+/* WINE PRICE */
+
+.wine-price {
+  margin-top: 28px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.wine-price .price-label {
+  display: block;
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  margin-bottom: 6px;
+}
+
+.wine-price strong {
+  display: block;
+  color: var(--gold);
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.wine-price small {
+  display: block;
+  margin-top: 6px;
+  color: #cfc3b6;
+}
+
+.wine-text-content {
+  max-width: 880px;
+}
+
+.wine-text-content h2 {
+  margin-top: 48px;
+}
+
+.wine-text-content h2:first-child {
+  margin-top: 0;
+}
+
+.wine-text-content p {
+  color: #6d6358;
+  font-size: 1.05rem;
+}
