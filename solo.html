@@ -1,76 +1,63 @@
 ---
 layout: default
-title: "一個人喝的葡萄酒推薦｜放鬆、追劇、下班後怎麼選？"
-description: "一個人喝葡萄酒怎麼選？整理適合下班放鬆、追劇、獨處與日常小酌的紅酒、白酒與氣泡酒選擇。"
+title: "一個人喝的葡萄酒推薦"
+description: "適合下班放鬆、追劇與日常小酌的葡萄酒推薦。"
 permalink: /solo/
 ---
 
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">SOLO WINE GUIDE</p>
+    <p class="eyebrow">SOLO</p>
     <h1>一個人喝酒，不需要理由</h1>
-    <p>
-      下班後、追劇時、想安靜一下的晚上，
-      選一瓶不需要太用力、但會讓心情變好的酒。
-    </p>
+    <p>選一瓶讓你放鬆的酒就好。</p>
   </div>
 </section>
 
 <section class="section section-light">
   <div class="container">
-    <h2>一個人喝酒的三個選擇方向</h2>
+
+    <h2>選酒方向</h2>
 
     <div class="card-grid three">
       <div class="info-card">
-        <h3>不要太厚重</h3>
-        <p>一個人喝時，太濃厚或太高酒精感的酒容易疲累，建議選擇輕鬆、果香明顯的風格。</p>
+        <h3>輕鬆</h3>
+        <p>不要太厚重。</p>
       </div>
-
       <div class="info-card">
-        <h3>開瓶壓力要低</h3>
-        <p>選擇容易入口、不需要複雜醒酒的酒款，更適合日常放鬆。</p>
+        <h3>容易入口</h3>
+        <p>不需要醒酒。</p>
       </div>
-
       <div class="info-card">
-        <h3>跟心情搭配</h3>
-        <p>想放鬆可選白酒或柔順紅酒；想有儀式感，可選氣泡酒。</p>
+        <h3>看心情</h3>
+        <p>白酒、紅酒都可以。</p>
       </div>
     </div>
+
   </div>
 </section>
 
 <section class="section section-dark">
   <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">RECOMMENDED</p>
-      <h2>適合一個人慢慢喝的酒</h2>
-      <p>適合下班、追劇、獨處與日常小酌。</p>
-    </div>
+
+    <h2>推薦酒款</h2>
 
     <div class="wine-list-grid">
       {% for wine in site.wines limit:6 %}
       <a class="wine-list-card" href="{{ wine.url | relative_url }}">
         <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
         <div class="wine-list-content">
-          <span>{{ wine.brand }}</span>
           <h4>{{ wine.title }}</h4>
-          <p>{{ wine.type }}・{{ wine.region }}</p>
         </div>
       </a>
       {% endfor %}
     </div>
-  </div>
-</section>
 
-<section class="section section-light">
-  <div class="container">
-    <div class="section-heading">
-      <h2>想找一瓶適合今晚的酒？</h2>
-      <p>
-        告訴我們你喜歡清爽、甜美、濃郁或柔順的風格，
-        我們可以協助推薦適合日常小酌的酒款。
-      </p>
-      <a href="{{ '/contact/' | relative_url }}" class="btn-primary">詢問推薦</a>
-    </div>
+    <hr>
+
+    <ul>
+      <li><a href="{{ '/gifts/' | relative_url }}">送禮酒推薦</a></li>
+      <li><a href="{{ '/dinner/' | relative_url }}">聚餐酒怎麼選</a></li>
+    </ul>
+
   </div>
 </section>

@@ -1,51 +1,45 @@
 ---
 layout: default
-title: "聚餐葡萄酒推薦｜朋友聚會、家人吃飯怎麼選酒？"
-description: "聚餐葡萄酒怎麼選？依照朋友聚會、家人吃飯、烤肉、海鮮與白肉料理，整理適合多人共享的葡萄酒選擇。"
+title: "聚餐葡萄酒推薦｜朋友聚會怎麼選酒？"
+description: "聚餐葡萄酒怎麼選？整理適合多人共享與搭餐的酒款選擇。"
 permalink: /dinner/
 ---
 
 <section class="page-hero">
   <div class="container">
     <p class="eyebrow">DINNER GUIDE</p>
-    <h1>聚餐選酒，重點不是貴，是大家都喝得開心</h1>
-    <p>
-      朋友聚會、家人吃飯、節日餐桌，
-      選一瓶接受度高、好搭餐的酒，氣氛就會變好。
-    </p>
+    <h1>聚餐選酒，重點是大家都喝得開心</h1>
+    <p>朋友、家人、聚會，選一瓶不會出錯的酒最重要。</p>
   </div>
 </section>
 
 <section class="section section-light">
   <div class="container">
-    <h2>聚餐選酒的三個方向</h2>
+
+    <h2>聚餐選酒重點</h2>
 
     <div class="card-grid three">
       <div class="info-card">
-        <h3>口感不要太難懂</h3>
-        <p>聚餐通常人多，建議選擇果香明顯、酸度平衡、單寧不過度尖銳的酒款。</p>
+        <h3>接受度高</h3>
+        <p>避免太酸或太重的風格。</p>
       </div>
-
       <div class="info-card">
-        <h3>要能搭多種料理</h3>
-        <p>餐桌上如果有海鮮、白肉、紅肉與熟食，可以準備紅白各一支更保險。</p>
+        <h3>好搭餐</h3>
+        <p>選擇紅白都能搭的酒最安全。</p>
       </div>
-
       <div class="info-card">
-        <h3>氣泡酒很適合開場</h3>
-        <p>氣泡酒能拉起氣氛，適合慶祝、節日與多人聚餐的第一杯。</p>
+        <h3>氣泡酒開場</h3>
+        <p>能快速帶起氣氛。</p>
       </div>
     </div>
+
   </div>
 </section>
 
 <section class="section section-dark">
   <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">RECOMMENDED</p>
-      <h2>適合聚餐的酒款</h2>
-      <p>以下酒款適合多人共享、餐桌搭配與輕鬆聚會。</p>
-    </div>
+
+    <h2>適合聚餐的酒</h2>
 
     <div class="wine-list-grid">
       {% for wine in site.wines limit:6 %}
@@ -54,22 +48,17 @@ permalink: /dinner/
         <div class="wine-list-content">
           <span>{{ wine.brand }}</span>
           <h4>{{ wine.title }}</h4>
-          <p>{{ wine.type }}・{{ wine.region }}</p>
         </div>
       </a>
       {% endfor %}
     </div>
-  </div>
-</section>
 
-<section class="section section-light">
-  <div class="container">
-    <div class="section-heading">
-      <h2>不知道要搭什麼菜？</h2>
-      <p>
-        告訴我們你的聚餐菜色與人數，我們可以協助建議適合的紅酒、白酒或氣泡酒。
-      </p>
-      <a href="{{ '/contact/' | relative_url }}" class="btn-primary">詢問聚餐選酒</a>
-    </div>
+    <hr>
+
+    <ul>
+      <li><a href="{{ '/gifts/' | relative_url }}">送禮酒推薦</a></li>
+      <li><a href="{{ '/solo/' | relative_url }}">一個人喝什麼酒</a></li>
+    </ul>
+
   </div>
 </section>

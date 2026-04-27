@@ -9,10 +9,7 @@ permalink: /gifts/
   <div class="container">
     <p class="eyebrow">GIFT GUIDE</p>
     <h1>送禮，不用再猜要買哪一瓶</h1>
-    <p>
-      不確定對方喜歡什麼？  
-      這裡幫你整理好幾種「安全又有質感」的選擇。
-    </p>
+    <p>不確定對方喜歡什麼？這裡幫你整理好幾種安全又有質感的選擇。</p>
   </div>
 </section>
 
@@ -24,17 +21,15 @@ permalink: /gifts/
     <div class="card-grid three">
       <div class="info-card">
         <h3>不要太極端</h3>
-        <p>太酸或太重口味的酒，反而容易讓對方不習慣。</p>
+        <p>太酸或太重口味的酒，容易讓對方不習慣。</p>
       </div>
-
       <div class="info-card">
         <h3>品牌要有辨識度</h3>
-        <p>選擇知名或有故事的酒莊，看起來更有價值感。</p>
+        <p>知名酒莊會讓整體質感提升。</p>
       </div>
-
       <div class="info-card">
         <h3>外觀很重要</h3>
-        <p>酒標、瓶型與整體感受，會影響第一印象。</p>
+        <p>酒標與瓶型會影響第一印象。</p>
       </div>
     </div>
 
@@ -45,11 +40,10 @@ permalink: /gifts/
   <div class="container">
 
     <div class="section-heading">
-      <h2>我們會推薦的送禮酒</h2>
+      <h2>推薦送禮酒款</h2>
     </div>
 
     <div class="wine-list-grid">
-
       {% for wine in site.wines limit:6 %}
       <a class="wine-list-card" href="{{ wine.url | relative_url }}">
         <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
@@ -60,7 +54,6 @@ permalink: /gifts/
         </div>
       </a>
       {% endfor %}
-
     </div>
 
   </div>
@@ -68,13 +61,24 @@ permalink: /gifts/
 
 <section class="section section-light">
   <div class="container">
-    <div class="section-heading">
-      <h2>還是不確定怎麼選？</h2>
-      <p>
-        直接告訴我們你的預算、送禮對象與場合，  
-        我們會幫你選一瓶不會出錯的酒。
-      </p>
-      <a href="{{ '/contact/' | relative_url }}" class="btn-primary">詢問推薦</a>
-    </div>
+
+    <h2>常見問題</h2>
+
+    <h3>送紅酒會不會太正式？</h3>
+    <p>紅酒是最安全的送禮選擇之一，只要選擇口感平衡即可。</p>
+
+    <h3>送禮選紅酒還是白酒？</h3>
+    <p>不確定時建議紅酒；聚餐或女性客戶白酒也適合。</p>
+
+    <hr>
+
+    <p>延伸閱讀：</p>
+    <ul>
+      <li><a href="{{ '/dinner/' | relative_url }}">聚餐怎麼選酒</a></li>
+      <li><a href="{{ '/solo/' | relative_url }}">一個人喝什麼酒</a></li>
+    </ul>
+
+    <a href="{{ '/contact/' | relative_url }}" class="btn-primary">詢問推薦</a>
+
   </div>
 </section>
