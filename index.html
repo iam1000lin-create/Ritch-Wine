@@ -25,43 +25,33 @@ permalink: /
   </div>
 </section>
 
-<section class="section section-scenario">
+<section class="section-scenario">
   <div class="container">
-
-    <div class="section-heading scenario-heading">
-      <p class="eyebrow dark">START HERE</p>
+    <div class="scenario-heading">
+      <p class="eyebrow">START HERE</p>
       <h2>從情境開始選酒</h2>
       <p>不用懂產區與品種，先選你要用在哪裡。</p>
     </div>
 
     <div class="scenario-grid">
-
       <a href="{{ '/gifts/' | relative_url }}" class="scenario-card">
-        <div class="card-inner">
-          <span>01</span>
-          <h3>送禮</h3>
-          <p>體面、安全、不出錯的選擇</p>
-        </div>
+        <span>01</span>
+        <h3>送禮</h3>
+        <p>體面、安全、不出錯的選擇</p>
       </a>
 
       <a href="{{ '/dinner/' | relative_url }}" class="scenario-card">
-        <div class="card-inner">
-          <span>02</span>
-          <h3>聚餐</h3>
-          <p>適合多人共享的餐桌酒</p>
-        </div>
+        <span>02</span>
+        <h3>聚餐</h3>
+        <p>適合多人共享的餐桌酒</p>
       </a>
 
       <a href="{{ '/solo/' | relative_url }}" class="scenario-card">
-        <div class="card-inner">
-          <span>03</span>
-          <h3>自己喝</h3>
-          <p>輕鬆、日常、沒有壓力</p>
-        </div>
+        <span>03</span>
+        <h3>自己喝</h3>
+        <p>輕鬆、日常、沒有壓力</p>
       </a>
-
     </div>
-
   </div>
 </section>
 
@@ -99,6 +89,7 @@ permalink: /
         <p class="eyebrow dark">FEATURED WINES</p>
         <h2>精選酒款</h2>
       </div>
+
       <a href="{{ '/wines/' | relative_url }}" class="text-link">查看全部酒款 →</a>
     </div>
 
@@ -106,6 +97,7 @@ permalink: /
       {% for wine in site.wines limit:6 %}
       <a class="wine-list-card" href="{{ wine.url | relative_url }}">
         <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
+
         <div class="wine-list-content">
           <span>{{ wine.brand }}</span>
           <h4>{{ wine.title }}</h4>

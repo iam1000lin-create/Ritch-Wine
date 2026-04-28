@@ -4,11 +4,13 @@
   --cream: #f4efe7;
   --paper: #fbf7ef;
   --gold: #c8a66a;
+  --gold-soft: #d6b778;
+  --gold-deep: #b8965c;
   --gold-dark: #8f6d38;
   --text: #26211c;
   --muted: #8f867b;
   --line: rgba(200, 166, 106, 0.28);
-  --white-line: rgba(255,255,255,0.12);
+  --white-line: rgba(255, 255, 255, 0.12);
 }
 
 * {
@@ -105,7 +107,7 @@ main {
   font-size: 0.82rem;
   letter-spacing: 0.16em;
   opacity: 0.86;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition: color 0.2s ease, opacity 0.2s ease, background 0.2s ease;
 }
 
 .nav-menu a:hover {
@@ -174,8 +176,8 @@ main {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.78) 36%, rgba(0,0,0,0.28) 68%, rgba(0,0,0,0.12) 100%),
-    radial-gradient(circle at 20% 50%, rgba(200,166,106,0.12), transparent 34%);
+    linear-gradient(90deg, rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.78) 36%, rgba(0, 0, 0, 0.28) 68%, rgba(0, 0, 0, 0.12) 100%),
+    radial-gradient(circle at 20% 50%, rgba(200, 166, 106, 0.12), transparent 34%);
 }
 
 .home-hero-content {
@@ -340,7 +342,108 @@ main {
   opacity: 0.82;
 }
 
-/* CARDS */
+/* SCENARIO SECTION */
+
+.section-scenario,
+.scenario-section {
+  background:
+    radial-gradient(circle at 78% 16%, rgba(255,255,255,0.2), transparent 28%),
+    linear-gradient(135deg, #d0ae6f 0%, #b8965c 54%, #96713b 100%);
+  color: #111;
+  padding: 118px 0 124px;
+}
+
+.section-scenario .container,
+.scenario-section .container {
+  width: min(1180px, calc(100% - 48px));
+}
+
+.scenario-heading {
+  max-width: 760px;
+  margin-bottom: 54px;
+}
+
+.scenario-heading .eyebrow,
+.section-scenario .eyebrow,
+.scenario-section .eyebrow {
+  color: rgba(0,0,0,0.58);
+}
+
+.scenario-heading h2,
+.section-scenario h2,
+.scenario-section h2 {
+  color: #111;
+  margin: 0 0 20px;
+  font-size: clamp(2.35rem, 4.2vw, 4.4rem);
+  line-height: 1.22;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.scenario-heading p,
+.section-scenario .section-heading p,
+.scenario-section .section-heading p {
+  color: rgba(0,0,0,0.68);
+  opacity: 1;
+}
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 54px;
+}
+
+.scenario-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(200,166,106,0.12), transparent 34%),
+    linear-gradient(135deg, #080807, #16110d);
+  color: var(--cream);
+  border: 1px solid rgba(0,0,0,0.42);
+  min-height: 282px;
+  padding: 40px;
+  box-shadow: 0 22px 55px rgba(0,0,0,0.18);
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+}
+
+.scenario-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,0,0,0.72);
+  box-shadow: 0 32px 72px rgba(0,0,0,0.28);
+}
+
+.scenario-card .card-inner {
+  padding: 0;
+}
+
+.scenario-card span {
+  display: block;
+  color: var(--gold);
+  font-size: 0.76rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 44px;
+}
+
+.scenario-card h3 {
+  margin: 0 0 14px;
+  color: var(--cream);
+  font-size: clamp(1.65rem, 2vw, 2rem);
+  line-height: 1.35;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+.scenario-card p {
+  color: rgba(244,239,231,0.72);
+  margin: 0;
+  font-size: 0.96rem;
+  opacity: 1;
+}
+
+/* GENERAL CARDS */
 
 .card-grid {
   display: grid;
@@ -888,6 +991,19 @@ main {
     display: block;
   }
 
+  .scenario-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-scenario,
+  .scenario-section {
+    padding: 82px 0 88px;
+  }
+
+  .scenario-card {
+    min-height: 230px;
+  }
+
   .wine-visual {
     min-height: 420px;
   }
@@ -923,87 +1039,5 @@ main {
     right: 18px;
     bottom: 18px;
     text-align: center;
-  }
-}
-/* SCENARIO SECTION（整段重做） */
-
-.section-scenario {
-  background: #c8a66a;
-  padding: 120px 0;
-  color: #111;
-}
-
-.scenario-heading h2 {
-  color: #111;
-}
-
-.scenario-heading p {
-  color: rgba(0,0,0,0.65);
-}
-
-.scenario-grid {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-/* 卡片 */
-
-.scenario-card {
-  display: block;
-  background: #0b0b0b;
-  color: #fff;
-  border: 1px solid rgba(0,0,0,0.2);
-  min-height: 260px;
-
-  transition: all 0.25s ease;
-}
-
-.scenario-card:hover {
-  transform: translateY(-6px);
-  border-color: #000;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-}
-
-.card-inner {
-  padding: 40px;
-}
-
-/* 編號 */
-
-.scenario-card span {
-  display: block;
-  color: #b8965c;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  margin-bottom: 28px;
-}
-
-/* 標題 */
-
-.scenario-card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 14px;
-  letter-spacing: 0.04em;
-  font-weight: 500;
-}
-
-/* 描述 */
-
-.scenario-card p {
-  color: rgba(255,255,255,0.7);
-  font-size: 0.95rem;
-}
-
-/* 手機 */
-
-@media (max-width: 900px) {
-  .scenario-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-scenario {
-    padding: 80px 0;
   }
 }
