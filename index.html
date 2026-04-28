@@ -1,107 +1,94 @@
 ---
 layout: default
 title: "Ritch Wine｜葡萄酒選品"
-description: "Ritch Wine 提供送禮、聚餐與日常葡萄酒選擇，協助你找到適合的那一瓶。"
+description: "Ritch Wine 禮奇酒業提供送禮、聚餐、日常飲用與企業採購葡萄酒選品建議。"
 permalink: /
 ---
 
-<!-- HERO -->
-<section class="hero-section">
-  <div class="container">
+<section class="home-hero">
+  <div class="home-hero-overlay"></div>
 
+  <div class="home-hero-content">
     <p class="eyebrow">RITCH WINE</p>
 
-    <h1>
-      不是在賣酒  
-      是幫你選一瓶不會出錯的酒
-    </h1>
+    <h1>不是在賣酒<br>是幫你選一瓶不會出錯的酒</h1>
 
     <p class="hero-copy">
-      送禮、聚餐、約會、自己喝  
-      你只需要說用途，我們幫你選
+      送禮、聚餐、自己喝。你只需要說用途，我們幫你挑。
     </p>
 
     <div class="hero-actions">
-      <a href="/Ritch-Wine/selector/" class="btn-primary">
-        幫我選酒
-      </a>
-
-      <a href="/Ritch-Wine/contact/" class="btn-secondary">
-        直接詢問
-      </a>
+      <a href="{{ '/selector/' | relative_url }}" class="btn-primary">幫我選酒</a>
+      <a href="{{ '/contact/' | relative_url }}" class="btn-secondary">直接詢問</a>
     </div>
-
   </div>
 </section>
 
-<!-- 快速入口 -->
 <section class="section section-light">
   <div class="container">
-
     <div class="section-heading">
-      <h2>從這裡開始</h2>
-      <p>不用懂酒，選一個情境就好</p>
+      <p class="eyebrow dark">START HERE</p>
+      <h2>從情境開始選酒</h2>
+      <p>不用懂產區，也不用背品種。先選你要用在哪裡。</p>
     </div>
 
     <div class="card-grid three">
-
-      <a href="/Ritch-Wine/gifts/" class="info-card">
+      <a href="{{ '/gifts/' | relative_url }}" class="info-card">
+        <span>01</span>
         <h3>送禮</h3>
-        <p>不確定怎麼選，這裡都是安全選擇</p>
+        <p>給客戶、長輩、朋友，選一瓶體面又安全的酒。</p>
       </a>
 
-      <a href="/Ritch-Wine/dinner/" class="info-card">
+      <a href="{{ '/dinner/' | relative_url }}" class="info-card">
+        <span>02</span>
         <h3>聚餐</h3>
-        <p>朋友、家庭、餐桌用酒</p>
+        <p>朋友聚會、家人吃飯，選適合多人共享的酒。</p>
       </a>
 
-      <a href="/Ritch-Wine/solo/" class="info-card">
+      <a href="{{ '/solo/' | relative_url }}" class="info-card">
+        <span>03</span>
         <h3>自己喝</h3>
-        <p>日常放鬆用酒</p>
+        <p>下班、追劇、放鬆，選一瓶不用太用力的酒。</p>
       </a>
-
     </div>
-
   </div>
 </section>
 
-<!-- 預算 -->
 <section class="section section-dark">
   <div class="container">
-
     <div class="section-heading">
+      <p class="eyebrow">BUDGET</p>
       <h2>依預算選酒</h2>
+      <p>從日常聚餐到重要送禮，都可以找到合適的選項。</p>
     </div>
 
     <div class="card-grid three">
-
-      <a href="/Ritch-Wine/wines/" class="dark-card">
+      <a href="{{ '/wines/' | relative_url }}" class="dark-card">
         <h3>NT$1000 左右</h3>
-        <p>日常與聚餐</p>
+        <p>適合日常、聚餐、輕鬆送禮。</p>
       </a>
 
-      <a href="/Ritch-Wine/wines/" class="dark-card">
+      <a href="{{ '/wines/' | relative_url }}" class="dark-card">
         <h3>NT$1500 左右</h3>
-        <p>送禮與聚會</p>
+        <p>適合送禮、聚會與較有質感的餐桌。</p>
       </a>
 
-      <a href="/Ritch-Wine/wines/" class="dark-card">
+      <a href="{{ '/wines/' | relative_url }}" class="dark-card">
         <h3>NT$2000 以上</h3>
-        <p>重要場合與高端選擇</p>
+        <p>適合重要場合、高端送禮與企業採購。</p>
       </a>
-
     </div>
-
   </div>
 </section>
 
-<!-- 精選 -->
 <section class="section section-light">
   <div class="container">
-
-    <div class="section-heading">
-      <h2>精選酒款</h2>
-      <p>從我們代理的酒款中挑出幾支你可以直接選的</p>
+    <div class="section-heading split">
+      <div>
+        <p class="eyebrow dark">FEATURED WINES</p>
+        <h2>精選酒款</h2>
+      </div>
+      <a href="{{ '/wines/' | relative_url }}" class="text-link">查看全部酒款 →</a>
     </div>
 
     <div class="wine-list-grid">
@@ -116,56 +103,16 @@ permalink: /
       </a>
       {% endfor %}
     </div>
-
   </div>
 </section>
 
-<!-- 品牌感 -->
 <section class="section section-dark">
   <div class="container">
-
     <div class="section-heading">
-      <h2>我們的選酒方式</h2>
+      <p class="eyebrow">INQUIRY</p>
+      <h2>還是不確定怎麼選？</h2>
+      <p>告訴我們預算、用途、送禮對象或聚餐菜色，我們幫你挑一支不會出錯的酒。</p>
+      <a href="{{ '/contact/' | relative_url }}" class="btn-primary">詢問選酒</a>
     </div>
-
-    <div class="card-grid three">
-
-      <div class="dark-card">
-        <h3>不做低價競爭</h3>
-        <p>我們選的是穩定、可靠、有品質的酒</p>
-      </div>
-
-      <div class="dark-card">
-        <h3>幫你降低風險</h3>
-        <p>你不用試錯，我們幫你選安全選項</p>
-      </div>
-
-      <div class="dark-card">
-        <h3>適合台灣市場</h3>
-        <p>不是國外評分，是實際好喝</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section section-light">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>還是不確定？</h2>
-
-      <p>
-        告訴我們預算與用途  
-        我們會幫你挑一支不會出錯的酒
-      </p>
-
-      <a href="/Ritch-Wine/contact/" class="btn-primary">
-        LINE / 詢問選酒
-      </a>
-    </div>
-
   </div>
 </section>
