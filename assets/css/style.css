@@ -843,3 +843,35 @@ main {
   color: #6d6358;
   font-size: 1.05rem;
 }
+
+/* FLOATING CTA */
+
+.floating-line {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 2000;
+  background: var(--gold);
+  color: var(--black);
+  padding: 14px 22px;
+  border: 1px solid var(--gold);
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.28);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.floating-line:hover {
+  transform: translateY(-3px);
+  background: #dbbd7c;
+  color: var(--black);
+}
+
+@media (max-width: 640px) {
+  .floating-line {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    text-align: center;
+  }
+}
