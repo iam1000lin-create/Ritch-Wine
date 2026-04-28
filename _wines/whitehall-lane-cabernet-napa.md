@@ -6,7 +6,7 @@ type: "紅酒"
 region: "美國加州 Napa Valley AVA"
 grapes: "94% Cabernet Sauvignon、4% Petit Verdot、2% Malbec"
 alcohol: "14.4%"
-image: "/assets/images/wines/whitehall-lane-cabernet-napa.png"
+image: "/assets/images/wines/WL-CS.png"
 
 price: "NT$3,080"
 price_note: "歡迎詢問優惠與庫存"

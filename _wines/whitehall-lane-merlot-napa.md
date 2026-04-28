@@ -6,7 +6,7 @@ type: "紅酒"
 region: "美國加州 Napa Valley AVA"
 grapes: "92% Merlot、8% Cabernet Sauvignon"
 alcohol: "14.4%"
-image: "/assets/images/wines/whitehall-lane-merlot-napa.png"
+image: "/assets/images/wines/WL-ML.png"
 
 price: "NT$2,280"
 price_note: "目前缺貨，歡迎詢問後續到貨"
