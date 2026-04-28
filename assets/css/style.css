@@ -925,3 +925,85 @@ main {
     text-align: center;
   }
 }
+/* SCENARIO SECTION（整段重做） */
+
+.section-scenario {
+  background: #c8a66a;
+  padding: 120px 0;
+  color: #111;
+}
+
+.scenario-heading h2 {
+  color: #111;
+}
+
+.scenario-heading p {
+  color: rgba(0,0,0,0.65);
+}
+
+.scenario-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* 卡片 */
+
+.scenario-card {
+  display: block;
+  background: #0b0b0b;
+  color: #fff;
+  border: 1px solid rgba(0,0,0,0.2);
+  min-height: 260px;
+
+  transition: all 0.25s ease;
+}
+
+.scenario-card:hover {
+  transform: translateY(-6px);
+  border-color: #000;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.card-inner {
+  padding: 40px;
+}
+
+/* 編號 */
+
+.scenario-card span {
+  display: block;
+  color: #b8965c;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 28px;
+}
+
+/* 標題 */
+
+.scenario-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+/* 描述 */
+
+.scenario-card p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+}
+
+/* 手機 */
+
+@media (max-width: 900px) {
+  .scenario-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-scenario {
+    padding: 80px 0;
+  }
+}
