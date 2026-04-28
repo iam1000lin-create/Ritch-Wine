@@ -1,23 +1,26 @@
-<nav class="site-nav" id="siteNav">
+<nav class="site-nav">
   <div class="nav-inner">
+
+    <!-- LOGO -->
     <a class="brand-mark" href="{{ '/' | relative_url }}">
-      <span class="brand-title">Ritch Wine</span>
-      <span class="brand-subtitle">禮奇酒業</span>
+      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Ritch Wine">
     </a>
 
-    <button class="nav-toggle" id="navToggle" type="button" aria-label="開啟選單" aria-expanded="false">
+    <!-- 漢堡 -->
+    <button class="nav-toggle" id="navToggle">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
+    <!-- MENU -->
     <div class="nav-menu" id="navMenu">
-      <a href="{{ '/wines/' | relative_url }}">酒款</a>
-      <a href="{{ '/gifts/' | relative_url }}">送禮</a>
-      <a href="{{ '/dinner/' | relative_url }}">聚餐</a>
-      <a href="{{ '/selector/' | relative_url }}">選酒</a>
-      <a href="{{ '/corporate/' | relative_url }}">企業</a>
-      <a href="{{ '/contact/' | relative_url }}" class="nav-cta">詢問</a>
+      <a href="{{ '/about/' | relative_url }}">ABOUT</a>
+      <a href="{{ '/brands/' | relative_url }}">BRANDS</a>
+      <a href="{{ '/wines/' | relative_url }}">WINES</a>
+      <a href="{{ '/corporate/' | relative_url }}">CORPORATE</a>
+      <a href="{{ '/contact/' | relative_url }}" class="nav-cta">CONTACT</a>
     </div>
+
   </div>
 </nav>

@@ -68,7 +68,14 @@ main {
 }
 
 .brand-mark {
-  line-height: 1.1;
+  display: flex;
+  align-items: center;
+}
+
+.brand-mark img {
+  height: 42px;
+  width: auto;
+  display: block;
 }
 
 .brand-title {
