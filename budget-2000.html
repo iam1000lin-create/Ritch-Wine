@@ -1,0 +1,34 @@
+---
+layout: default
+title: "NT$2000 以上葡萄酒推薦｜Ritch Wine"
+description: "適合重要場合、高端送禮與企業採購的 NT$2000 以上葡萄酒推薦。"
+permalink: /budget-2000/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">BUDGET</p>
+    <h1>NT$2000 以上</h1>
+    <p>適合重要場合、高端送禮與企業採購。</p>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="wine-list-grid">
+      {% for wine in site.wines %}
+        {% assign clean_price = wine.price | remove: "NT$" | remove: "," | plus: 0 %}
+        {% if clean_price > 1800 %}
+        <a class="wine-list-card" href="{{ wine.url | relative_url }}">
+          <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
+          <div class="wine-list-content">
+            <span>{{ wine.brand }}</span>
+            <h4>{{ wine.title }}</h4>
+            <p>{{ wine.price }}</p>
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
