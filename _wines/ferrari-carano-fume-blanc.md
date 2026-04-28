@@ -6,7 +6,7 @@ type: "白酒"
 region: "美國加州"
 grapes: "100% Sauvignon Blanc"
 alcohol: "13.9%"
-image: "/assets/images/wines/ferrari-carano-fume-blanc.png"
+image: "/assets/images/wines/FC-FB.png"
 
 price: "NT$1,380"
 price_note: "歡迎詢問優惠與庫存"

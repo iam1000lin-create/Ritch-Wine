@@ -6,7 +6,7 @@ type: "紅酒"
 region: "法國 北隆河"
 grapes: "100% Syrah"
 alcohol: "13.5%"
-image: "/assets/images/wines/guy-farge-saint-joseph.png"
+image: "/assets/images/wines/GF-RW.png"
 
 price: "NT$1,780"
 price_note: "歡迎詢問優惠與庫存"

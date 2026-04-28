@@ -6,7 +6,7 @@ type: "氣泡酒"
 region: "美國加州 Napa Valley / Sonoma Valley"
 grapes: "66% Pinot Noir、34% Chardonnay"
 alcohol: "13.0%"
-image: "/assets/images/wines/schramsberg-brut-rose.png"
+image: "/assets/images/wines/SH-BR.png"
 
 price: "NT$2,680"
 price_note: "歡迎詢問優惠與庫存"

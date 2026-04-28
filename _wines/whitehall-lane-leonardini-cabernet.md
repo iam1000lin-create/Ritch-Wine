@@ -6,7 +6,7 @@ type: "紅酒"
 region: "美國加州 Napa Valley AVA"
 grapes: "94% Cabernet Sauvignon、6% Petit Verdot"
 alcohol: "14.9%"
-image: "/assets/images/wines/whitehall-lane-leonardini-cabernet.png"
+image: "/assets/images/wines/WL-LS.png"
 
 price: "NT$4,800"
 price_note: "歡迎詢問優惠與庫存"

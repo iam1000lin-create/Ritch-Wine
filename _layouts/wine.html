@@ -30,26 +30,40 @@ layout: default
         {% endif %}
 
         <div class="wine-specs">
+          {% if page.year %}
           <div>
             <span>年份</span>
             <strong>{{ page.year }}</strong>
           </div>
+          {% endif %}
+
+          {% if page.type %}
           <div>
             <span>酒類</span>
             <strong>{{ page.type }}</strong>
           </div>
+          {% endif %}
+
+          {% if page.region %}
           <div>
             <span>產區</span>
             <strong>{{ page.region }}</strong>
           </div>
+          {% endif %}
+
+          {% if page.grapes %}
           <div>
             <span>品種</span>
             <strong>{{ page.grapes }}</strong>
           </div>
+          {% endif %}
+
+          {% if page.alcohol %}
           <div>
             <span>酒精濃度</span>
             <strong>{{ page.alcohol }}</strong>
           </div>
+          {% endif %}
         </div>
 
         <div class="wine-actions">
@@ -64,14 +78,20 @@ layout: default
 
 <section class="section section-light">
   <div class="container wine-text-content">
+    {% if page.tasting %}
     <h2>風味描述</h2>
     <p>{{ page.tasting }}</p>
+    {% endif %}
 
+    {% if page.pairing %}
     <h2>餐酒搭配</h2>
     <p>{{ page.pairing }}</p>
+    {% endif %}
 
+    {% if page.occasion %}
     <h2>適合場合</h2>
     <p>{{ page.occasion }}</p>
+    {% endif %}
   </div>
 </section>
 
@@ -79,17 +99,18 @@ layout: default
   <div class="container wine-text-content">
     <h2>{{ page.title }} 是什麼酒？</h2>
     <p>
-      {{ page.title }} 來自 {{ page.region }}，
-      使用 {{ page.grapes }} 釀造，
-      屬於 {{ page.type }}。
-      這類型酒款適合 {{ page.occasion }}，
-      風味呈現 {{ page.tasting }}
+      {{ page.title }}
+      {% if page.region %}來自 {{ page.region }}，{% endif %}
+      {% if page.grapes %}使用 {{ page.grapes }} 釀造，{% endif %}
+      {% if page.type %}屬於 {{ page.type }}。{% endif %}
+      {% if page.occasion %}這類型酒款適合 {{ page.occasion }}，{% endif %}
+      {% if page.tasting %}風味呈現 {{ page.tasting }}{% endif %}
     </p>
 
     <h2>{{ page.title }} 適合送禮嗎？</h2>
     <p>
-      若作為送禮使用，{{ page.title }} 是接受度高且容易搭配的選擇。
-      若需要確認庫存、價格或搭配建議，歡迎聯繫禮奇酒業。
+      若作為送禮使用，{{ page.title }} 是具質感且容易搭配的選擇。
+      若需要確認庫存、價格或搭配建議，歡迎聯繫 Ritch Wine 禮奇酒業。
     </p>
 
     <a href="{{ '/contact/' | relative_url }}" class="btn-primary">聯絡我們</a>
@@ -107,12 +128,12 @@ layout: default
   },
   "description": "{{ page.tasting | strip_html }}",
   "category": "{{ page.type }}",
-  "image": "{{ site.url }}{{ site.baseurl }}{{ page.image }}",
+  "image": "{{ site.url }}{{ site.baseurl }}{{ page.image }}"{% if page.price %},
   "offers": {
     "@type": "Offer",
     "priceCurrency": "TWD",
     "price": "{{ page.price | remove: 'NT$' | remove: ',' }}",
     "availability": "https://schema.org/InStock"
-  }
+  }{% endif %}
 }
 </script>

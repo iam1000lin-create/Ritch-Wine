@@ -6,7 +6,7 @@ type: "紅酒"
 region: "法國 南隆河 Châteauneuf-du-Pape"
 grapes: "Grenache Blend"
 alcohol: "14%"
-image: "/assets/images/wines/chateauneuf.png"
+image: "/assets/images/wines/MB-CP.png"
 
 price: "NT$2,280"
 price_note: "歡迎詢問優惠與庫存"

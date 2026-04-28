@@ -6,7 +6,7 @@ type: "白酒"
 region: "法國 北隆河"
 grapes: "Roussanne、Marsanne"
 alcohol: "13.5%"
-image: "/assets/images/wines/guy-farge-saint-peray.png"
+image: "/assets/images/wines/GF-WW.png"
 
 price: "NT$1,780"
 price_note: "歡迎詢問優惠與庫存"

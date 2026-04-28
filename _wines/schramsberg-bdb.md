@@ -6,7 +6,7 @@ type: "氣泡酒"
 region: "California"
 grapes: "100% Chardonnay"
 alcohol: "12.3%"
-image: "/assets/images/wines/schramsberg-bdb.png"
+image: "/assets/images/wines/SH-BB.png"
 
 price: "NT$2,480"
 price_note: "歡迎詢問優惠與庫存"

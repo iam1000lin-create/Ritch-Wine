@@ -1,12 +1,12 @@
 ---
-title: "Schramsberg Mirabelle Brut Rosé 2021"
+title: "Schramsberg Mirabelle Brut Rosé"
 brand: "Schramsberg"
-year: "2021"
+year: ""
 type: "氣泡酒"
 region: "North Coast, California"
 grapes: "62% Chardonnay、38% Pinot Noir"
 alcohol: "12.8%"
-image: "/assets/images/wines/schramsberg-mirabelle-brut-rose.png"
+image: "/assets/images/wines/SH-MBR.png"
 
 price: "NT$2,280"
 price_note: "歡迎詢問優惠與庫存"

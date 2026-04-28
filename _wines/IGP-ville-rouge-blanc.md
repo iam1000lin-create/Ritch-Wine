@@ -6,7 +6,7 @@ type: "白酒"
 region: "法國 北隆河"
 grapes: "Viognier、Chardonnay"
 alcohol: "12.5%"
-image: "/assets/images/wines/ville-rouge-blanc.png"
+image: "/assets/images/wines/IGP-W.png"
 
 price: "NT$1,120"
 price_note: "歡迎詢問優惠與庫存"

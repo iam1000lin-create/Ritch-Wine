@@ -6,7 +6,7 @@ type: "氣泡酒"
 region: "North Coast, California"
 grapes: "82% Pinot Noir、18% Chardonnay"
 alcohol: "12.8%"
-image: "/assets/images/wines/schramsberg-blanc-de-noirs.png"
+image: "/assets/images/wines/SH-BN.png"
 
 price: "NT$2,480"
 price_note: "歡迎詢問優惠與庫存"
