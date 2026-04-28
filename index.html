@@ -1,110 +1,116 @@
 ---
 layout: default
 title: "禮奇酒業｜葡萄酒選品"
-description: "從送禮、聚餐到日常放鬆，提供適合各種情境的葡萄酒選擇。"
+description: "送禮、聚餐、日常用酒推薦，提供專業選酒建議。"
 permalink: /
 ---
 
 <section class="hero-section">
   <div class="container">
-    <p class="eyebrow">RITCH WINES</p>
-    <h1>今天，你想喝哪一種心情？</h1>
+    <p class="eyebrow">LI CHI WINES</p>
+
+    <h1>不知道要選哪一瓶酒？我們幫你選</h1>
+
     <p class="hero-copy">
-      從送禮、聚餐到一個人的夜晚，
-      我們幫你選一瓶剛剛好的酒。
+      送禮、聚餐、約會、自己喝  
+      直接告訴我們需求，我們幫你挑一瓶剛剛好的酒
     </p>
 
     <div class="hero-actions">
-      <a href="{{ '/wines/' | relative_url }}" class="btn-primary">看看酒款</a>
-      <a href="{{ '/contact/' | relative_url }}" class="btn-secondary">詢問推薦</a>
+      <a href="/Ritch-Wine/gifts/" class="btn-primary">送禮選酒</a>
+      <a href="/Ritch-Wine/contact/" class="btn-secondary">直接詢問</a>
     </div>
   </div>
 </section>
 
+<!-- 快速入口 -->
 <section class="section section-light">
   <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow dark">FEATURED</p>
-      <h2>精選酒款</h2>
-      <p>從經典到特色，挑幾支我們真的會推薦的。</p>
+
+    <div class="card-grid three">
+
+      <a href="/Ritch-Wine/gifts/" class="info-card">
+        <h3>送禮</h3>
+        <p>不知道送什麼，這裡幫你挑安全選擇</p>
+      </a>
+
+      <a href="/Ritch-Wine/dinner/" class="info-card">
+        <h3>聚餐</h3>
+        <p>朋友聚會、家庭用酒</p>
+      </a>
+
+      <a href="/Ritch-Wine/solo/" class="info-card">
+        <h3>自己喝</h3>
+        <p>輕鬆日常用酒</p>
+      </a>
+
     </div>
 
+  </div>
+</section>
+
+<!-- 價格帶 -->
+<section class="section section-dark">
+  <div class="container">
+
+    <h2>依預算選酒</h2>
+
+    <div class="card-grid three">
+
+      <a href="/Ritch-Wine/wines/" class="dark-card">
+        <h3>NT$1000 左右</h3>
+        <p>日常與聚餐</p>
+      </a>
+
+      <a href="/Ritch-Wine/wines/" class="dark-card">
+        <h3>NT$1500 左右</h3>
+        <p>送禮與聚會</p>
+      </a>
+
+      <a href="/Ritch-Wine/wines/" class="dark-card">
+        <h3>NT$2000 以上</h3>
+        <p>重要場合</p>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- 精選酒 -->
+<section class="section section-light">
+  <div class="container">
+
+    <h2>精選酒款</h2>
+
     <div class="wine-list-grid">
-      {% for wine in site.wines limit:4 %}
+      {% for wine in site.wines limit:6 %}
       <a class="wine-list-card" href="{{ wine.url | relative_url }}">
         <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
         <div class="wine-list-content">
           <span>{{ wine.brand }}</span>
           <h4>{{ wine.title }}</h4>
-          <p>{{ wine.type }}・{{ wine.region }}</p>
+          <p>{{ wine.price }}</p>
         </div>
       </a>
       {% endfor %}
     </div>
+
   </div>
 </section>
 
+<!-- CTA -->
 <section class="section section-dark">
   <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">BY MOMENT</p>
-      <h2>用情境選酒</h2>
-    </div>
 
-    <div class="card-grid three">
-      <div class="dark-card">
-        <a href="{{ '/gifts/' | relative_url }}">
-            <h3>送禮</h3>
-        </a>
-        <p>不確定怎麼選？這裡都是安全又體面的選擇。</p>
-      </div>
+    <h2>還是不確定怎麼選？</h2>
 
-      <div class="dark-card">
-        <a href="{{ '/dinner/' | relative_url }}">
-            <h3>聚餐</h3>
-        </a>
-        <p>朋友聚會、家人吃飯，適合多數人口味的酒款。</p>
-      </div>
+    <p>
+      直接告訴我們預算與用途  
+      我們會幫你挑一支不會出錯的酒
+    </p>
 
-      <div class="dark-card">
-        <a href="{{ '/solo/' | relative_url }}">
-            <h3>一個人的夜晚</h3>
-        </a>
-        <p>輕鬆、舒服、陪伴的酒。</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <a href="/Ritch-Wine/contact/" class="btn-primary">LINE / 詢問</a>
 
-<section class="section section-light">
-  <div class="container">
-    <div class="section-heading split">
-      <div>
-        <p class="eyebrow dark">BRANDS</p>
-        <h2>我們代理的酒莊</h2>
-      </div>
-      <a href="{{ '/brands/' | relative_url }}" class="text-link">全部品牌 →</a>
-    </div>
-
-    <div class="brand-row">
-      <div class="brand-item">BOGLE</div>
-      <div class="brand-item">JUGGERNAUT</div>
-      <div class="brand-item">SCHRAMSBERG</div>
-      <div class="brand-item">WHITEHALL LANE</div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-dark">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">CORPORATE</p>
-      <h2>企業送禮與活動用酒</h2>
-      <p>
-        若有企業採購、節慶禮盒或活動需求，
-        也可由我們協助選酒與搭配。
-      </p>
-      <a href="{{ '/corporate/' | relative_url }}" class="btn-primary">企業洽詢</a>
-    </div>
   </div>
 </section>
