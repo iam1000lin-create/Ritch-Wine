@@ -1,8 +1,10 @@
 :root {
   --black: #080807;
   --charcoal: #11100e;
+  --ink: #15110d;
   --cream: #f4efe7;
   --paper: #fbf7ef;
+  --warm-paper: #e9e2d6;
   --gold: #c8a66a;
   --gold-soft: #d6b778;
   --gold-deep: #b8965c;
@@ -11,6 +13,9 @@
   --muted: #8f867b;
   --line: rgba(200, 166, 106, 0.28);
   --white-line: rgba(255, 255, 255, 0.12);
+
+  --font-display: "Noto Serif TC", "Songti TC", "STSong", "PMingLiU", serif;
+  --font-body: "Noto Serif TC", "Songti TC", "PingFang TC", "Microsoft JhengHei", serif;
 }
 
 * {
@@ -25,8 +30,9 @@ body {
   margin: 0;
   background: var(--black);
   color: var(--cream);
-  font-family: "Noto Serif TC", "Times New Roman", serif;
+  font-family: var(--font-body);
   line-height: 1.8;
+  letter-spacing: 0.01em;
 }
 
 a {
@@ -176,8 +182,8 @@ main {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.78) 36%, rgba(0, 0, 0, 0.28) 68%, rgba(0, 0, 0, 0.12) 100%),
-    radial-gradient(circle at 20% 50%, rgba(200, 166, 106, 0.12), transparent 34%);
+    linear-gradient(90deg, rgba(0,0,0,0.96) 0%, rgba(0,0,0,0.82) 34%, rgba(0,0,0,0.35) 68%, rgba(0,0,0,0.16) 100%),
+    radial-gradient(circle at 20% 50%, rgba(200,166,106,0.12), transparent 34%);
 }
 
 .home-hero-content {
@@ -203,9 +209,10 @@ main {
 .home-hero h1 {
   max-width: 760px;
   margin: 0;
+  font-family: var(--font-display);
   font-size: clamp(2.7rem, 5vw, 5.8rem);
   line-height: 1.16;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.035em;
   font-weight: 500;
 }
 
@@ -236,9 +243,10 @@ main {
 
 .page-hero h1 {
   margin: 0;
+  font-family: var(--font-display);
   font-size: clamp(2.6rem, 5vw, 5.2rem);
   line-height: 1.16;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.045em;
   font-weight: 500;
 }
 
@@ -331,9 +339,10 @@ main {
 .section-heading h2,
 .section h2 {
   margin: 0 0 22px;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 3.2vw, 3.3rem);
   line-height: 1.32;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.045em;
   font-weight: 500;
 }
 
@@ -346,9 +355,13 @@ main {
 
 .section-scenario,
 .scenario-section {
-  background: #e9e2d6;
-  color: #111;
-  padding: 118px 0 124px;
+  background:
+    radial-gradient(circle at 80% 8%, rgba(200,166,106,0.12), transparent 30%),
+    linear-gradient(180deg, #0a0907 0%, #15100c 100%);
+  color: var(--cream);
+  padding: 126px 0 132px;
+  border-top: 1px solid rgba(200,166,106,0.18);
+  border-bottom: 1px solid rgba(200,166,106,0.18);
 }
 
 .section-scenario .container,
@@ -358,30 +371,31 @@ main {
 
 .scenario-heading {
   max-width: 760px;
-  margin-bottom: 54px;
+  margin-bottom: 58px;
 }
 
 .scenario-heading .eyebrow,
 .section-scenario .eyebrow,
 .scenario-section .eyebrow {
-  color: rgba(0,0,0,0.58);
+  color: var(--gold);
 }
 
 .scenario-heading h2,
 .section-scenario h2,
 .scenario-section h2 {
-  color: #111;
+  color: var(--cream);
   margin: 0 0 20px;
-  font-size: clamp(2.35rem, 4.2vw, 4.4rem);
-  line-height: 1.22;
-  letter-spacing: 0.05em;
+  font-family: var(--font-display);
+  font-size: clamp(2.45rem, 4.4vw, 4.7rem);
+  line-height: 1.18;
+  letter-spacing: 0.045em;
   font-weight: 500;
 }
 
 .scenario-heading p,
 .section-scenario .section-heading p,
 .scenario-section .section-heading p {
-  color: rgba(0,0,0,0.68);
+  color: rgba(244,239,231,0.68);
   opacity: 1;
 }
 
@@ -397,20 +411,20 @@ main {
   flex-direction: column;
   justify-content: space-between;
   background:
-    radial-gradient(circle at 82% 18%, rgba(200,166,106,0.12), transparent 34%),
-    linear-gradient(135deg, #080807, #16110d);
+    radial-gradient(circle at 82% 18%, rgba(200,166,106,0.11), transparent 34%),
+    linear-gradient(135deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018));
   color: var(--cream);
-  border: 1px solid rgba(0,0,0,0.12);
-  min-height: 282px;
-  padding: 40px;
-  box-shadow: 0 22px 55px rgba(0,0,0,0.18);
+  border: 1px solid rgba(200,166,106,0.24);
+  min-height: 300px;
+  padding: 42px;
+  box-shadow: none;
   transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
 }
 
 .scenario-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(0,0,0,0.72);
-  box-shadow: 0 32px 72px rgba(0,0,0,0.28);
+  border-color: rgba(200,166,106,0.62);
+  box-shadow: 0 30px 74px rgba(0,0,0,0.3);
 }
 
 .scenario-card .card-inner {
@@ -422,15 +436,16 @@ main {
   color: var(--gold);
   font-size: 0.76rem;
   letter-spacing: 0.2em;
-  margin-bottom: 44px;
+  margin-bottom: 48px;
 }
 
 .scenario-card h3 {
   margin: 0 0 14px;
   color: var(--cream);
-  font-size: clamp(1.65rem, 2vw, 2rem);
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 2vw, 2.1rem);
   line-height: 1.35;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.055em;
   font-weight: 500;
 }
 
@@ -478,6 +493,7 @@ main {
 .info-card h3,
 .dark-card h3 {
   margin: 0 0 14px;
+  font-family: var(--font-display);
   font-size: 1.45rem;
   letter-spacing: 0.04em;
   font-weight: 500;
@@ -550,6 +566,7 @@ main {
 }
 
 .wine-list-content h4 {
+  font-family: var(--font-display);
   font-size: 1.1rem;
   line-height: 1.5;
   margin: 0 0 12px;
@@ -570,22 +587,6 @@ main {
   color: #8d8175;
   font-size: 0.82rem;
   line-height: 1.6;
-}
-
-@media (max-width: 1100px) {
-  .wine-list-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .wine-list-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .wine-list-image {
-    height: 300px;
-  }
 }
 
 /* WINE DETAIL */
@@ -632,6 +633,7 @@ main {
 
 .wine-info h1 {
   margin: 0;
+  font-family: var(--font-display);
   font-size: clamp(2.65rem, 4.7vw, 5rem);
   line-height: 1.12;
   letter-spacing: 0.035em;
@@ -721,6 +723,7 @@ main {
 .wine-text-content h2,
 .content h2 {
   margin: 0 0 16px;
+  font-family: var(--font-display);
   font-size: clamp(1.75rem, 2.7vw, 2.7rem);
   line-height: 1.32;
   letter-spacing: 0.05em;
@@ -744,7 +747,6 @@ main {
 .content .btn-primary {
   margin-top: 24px;
 }
-
 
 /* BRAND */
 
@@ -799,6 +801,7 @@ main {
 
 .brand-list-card h2 {
   margin: 0 0 12px;
+  font-family: var(--font-display);
   font-size: 1.8rem;
   letter-spacing: 0.06em;
 }
@@ -851,6 +854,7 @@ main {
 
 .contact-main h2 {
   margin: 0;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 3vw, 3.2rem);
   line-height: 1.35;
   letter-spacing: 0.05em;
@@ -1029,7 +1033,8 @@ main {
   .corporate-points,
   .contact-grid,
   .wine-detail-grid,
-  .wine-specs {
+  .wine-specs,
+  .scenario-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1037,17 +1042,13 @@ main {
     display: block;
   }
 
-  .scenario-grid {
-    grid-template-columns: 1fr;
-  }
-
   .section-scenario,
   .scenario-section {
-    padding: 82px 0 88px;
+    padding: 86px 0 92px;
   }
 
   .scenario-card {
-    min-height: 230px;
+    min-height: 240px;
   }
 
   .wine-visual {
@@ -1078,6 +1079,10 @@ main {
 
   .wine-list-grid {
     grid-template-columns: 1fr;
+  }
+
+  .wine-list-image {
+    height: 300px;
   }
 
   .floating-line {
