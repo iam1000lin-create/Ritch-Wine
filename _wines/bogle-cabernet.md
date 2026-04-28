@@ -6,7 +6,7 @@ type: "紅酒"
 region: "美國加州 Clarksburg AVA"
 grapes: "100% Cabernet Sauvignon"
 alcohol: "14.5%"
-image: "/assets/images/wines/bogle-cabernet.png"
+image: "/assets/images/wines/BO-CS.png"
 
 price: "NT$1,080"
 price_note: "歡迎詢問優惠與庫存"

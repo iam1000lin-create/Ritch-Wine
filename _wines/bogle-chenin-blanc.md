@@ -6,7 +6,7 @@ type: "白酒"
 region: "美國加州 Clarksburg AVA"
 grapes: "100% Chenin Blanc"
 alcohol: "12.5%"
-image: "/assets/images/wines/bogle-chenin.png"
+image: "/assets/images/wines/BO-CB.png"
 
 price: "NT$1,080"
 price_note: "歡迎詢問優惠與庫存"

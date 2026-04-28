@@ -6,7 +6,7 @@ type: "氣泡酒"
 region: "North Coast, California"
 grapes: "Chardonnay Blend"
 alcohol: "12.8%"
-image: "/assets/images/wines/schramsberg-j-schram-blancs.png"
+image: "/assets/images/wines/SH-JS-Blancs.png"
 
 price: "NT$6,080"
 price_note: "歡迎詢問優惠與庫存"

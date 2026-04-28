@@ -6,7 +6,7 @@ type: "氣泡酒"
 region: "North Coast, California"
 grapes: "Pinot Noir Blend"
 alcohol: "12.4%"
-image: "/assets/images/wines/schramsberg-j-schram-noirs.png"
+image: "/assets/images/wines/SH-JS-Noirs.png"
 
 price: "NT$6,080"
 price_note: "歡迎詢問優惠與庫存"

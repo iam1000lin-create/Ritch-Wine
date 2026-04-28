@@ -6,7 +6,7 @@ type: "氣泡酒"
 region: "North Coast, California"
 grapes: "79% Pinot Noir、21% Chardonnay"
 alcohol: "12.8%"
-image: "/assets/images/wines/schramsberg-j-schram-2009.png"
+image: "/assets/images/wines/SH-JS.png"
 
 price: "NT$5,880"
 price_note: "歡迎詢問優惠與庫存"
