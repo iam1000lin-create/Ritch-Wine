@@ -346,9 +346,7 @@ main {
 
 .section-scenario,
 .scenario-section {
-  background:
-    radial-gradient(circle at 78% 16%, rgba(255,255,255,0.2), transparent 28%),
-    linear-gradient(135deg, #d0ae6f 0%, #b8965c 54%, #96713b 100%);
+  background: #f5f5dc;
   color: #111;
   padding: 118px 0 124px;
 }
@@ -402,7 +400,7 @@ main {
     radial-gradient(circle at 82% 18%, rgba(200,166,106,0.12), transparent 34%),
     linear-gradient(135deg, #080807, #16110d);
   color: var(--cream);
-  border: 1px solid rgba(0,0,0,0.42);
+  border: 1px solid rgba(0,0,0,0.12);
   min-height: 282px;
   padding: 40px;
   box-shadow: 0 22px 55px rgba(0,0,0,0.18);
@@ -512,25 +510,26 @@ main {
 .wine-list-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
+  gap: 26px;
 }
 
 .wine-list-card {
   display: block;
-  background: var(--paper);
-  color: var(--text);
-  border: 1px solid rgba(0,0,0,0.08);
-  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  background: #ffffff;
+  color: #111;
+  border: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .wine-list-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.12);
 }
 
 .wine-list-image {
-  height: 260px;
-  background-color: #efe8dc;
+  height: 320px;
+  background-color: #f3eee6;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -538,86 +537,117 @@ main {
 }
 
 .wine-list-content {
-  padding: 22px;
+  padding: 26px;
 }
 
 .wine-list-content span {
   display: block;
-  color: var(--gold-dark);
-  letter-spacing: 0.14em;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: #8a7a67;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 .wine-list-content h4 {
-  margin: 0 0 10px;
-  font-size: 1.08rem;
-  line-height: 1.45;
-  letter-spacing: 0.04em;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0 0 12px;
   font-weight: 500;
+  letter-spacing: 0.03em;
 }
 
 .wine-list-content p {
-  margin: 0 0 8px;
-  color: #71675c;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  color: var(--gold);
+  margin: 0;
+  letter-spacing: 0.04em;
 }
 
 .wine-list-content small {
+  display: block;
+  margin-top: 8px;
   color: #8d8175;
   font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .wine-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .wine-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wine-list-image {
+    height: 300px;
+  }
 }
 
 /* WINE DETAIL */
 
 .wine-detail-hero {
   background:
-    radial-gradient(circle at 24% 38%, rgba(200,166,106,0.14), transparent 34%),
-    linear-gradient(135deg, #080807, #17120e);
+    radial-gradient(circle at 18% 22%, rgba(200,166,106,0.16), transparent 30%),
+    linear-gradient(135deg, #080807 0%, #14100c 54%, #1d160f 100%);
   color: var(--cream);
-  padding: 110px 0;
+  padding: 118px 0 112px;
   border-bottom: 1px solid var(--line);
 }
 
 .wine-detail-grid {
   display: grid;
-  grid-template-columns: 42% 58%;
-  gap: 64px;
+  grid-template-columns: minmax(320px, 0.88fr) minmax(0, 1.12fr);
+  gap: 76px;
   align-items: center;
 }
 
 .wine-visual {
-  min-height: 560px;
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,0.045);
+  min-height: 620px;
+  border: 1px solid rgba(200,166,106,0.32);
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255,255,255,0.10), transparent 38%),
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018));
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 48px;
+  padding: 56px;
+  box-shadow: 0 34px 90px rgba(0,0,0,0.28);
 }
 
 .wine-visual img {
-  max-height: 480px;
+  max-height: 520px;
+  width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 34px 48px rgba(0,0,0,0.55));
+}
+
+.wine-info {
+  max-width: 720px;
 }
 
 .wine-info h1 {
   margin: 0;
-  font-size: clamp(2.4rem, 4.5vw, 4.8rem);
-  line-height: 1.15;
-  letter-spacing: 0.04em;
+  font-size: clamp(2.65rem, 4.7vw, 5rem);
+  line-height: 1.12;
+  letter-spacing: 0.035em;
   font-weight: 500;
 }
 
 .wine-lead {
-  margin-top: 22px;
+  margin: 24px 0 0;
   color: #d5cabe;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
 }
 
 .wine-price {
-  margin: 28px 0;
-  padding: 22px 0;
+  margin: 34px 0 0;
+  padding: 24px 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -627,33 +657,36 @@ main {
   display: block;
   color: var(--gold);
   font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  margin-bottom: 6px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
 .wine-price strong {
   display: block;
   color: var(--gold);
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+  line-height: 1.15;
   font-weight: 500;
   letter-spacing: 0.04em;
 }
 
 .wine-price small {
   display: block;
-  margin-top: 6px;
+  margin-top: 8px;
   color: #cfc3b6;
+  font-size: 0.88rem;
 }
 
 .wine-specs {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 28px;
   margin-top: 42px;
 }
 
 .wine-specs div {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(200,166,106,0.24);
   padding-top: 16px;
 }
 
@@ -670,35 +703,48 @@ main {
   margin-top: 8px;
   font-weight: 400;
   color: var(--cream);
+  line-height: 1.65;
 }
 
 .wine-actions {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  margin-top: 42px;
+  margin-top: 44px;
 }
 
-.content,
-.wine-text-content {
-  max-width: 880px;
+.wine-text-content,
+.content {
+  max-width: 900px;
 }
 
-.content h2,
-.wine-text-content h2 {
-  margin-top: 48px;
+.wine-text-content h2,
+.content h2 {
+  margin: 0 0 16px;
+  font-size: clamp(1.75rem, 2.7vw, 2.7rem);
+  line-height: 1.32;
+  letter-spacing: 0.05em;
+  font-weight: 500;
 }
 
-.content h2:first-child,
-.wine-text-content h2:first-child {
-  margin-top: 0;
+.wine-text-content h2:not(:first-child),
+.content h2:not(:first-child) {
+  margin-top: 56px;
 }
 
-.content p,
-.wine-text-content p {
-  color: #6d6358;
-  font-size: 1.05rem;
+.wine-text-content p,
+.content p {
+  color: #665d52;
+  font-size: 1.06rem;
+  line-height: 2;
+  margin: 0 0 18px;
 }
+
+.wine-text-content .btn-primary,
+.content .btn-primary {
+  margin-top: 24px;
+}
+
 
 /* BRAND */
 
