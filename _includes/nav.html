@@ -1,20 +1,23 @@
-<nav class="site-nav">
+<nav class="site-nav" id="siteNav">
   <div class="nav-inner">
     <a class="brand-mark" href="{{ '/' | relative_url }}">
-      <span class="brand-title">禮奇酒業</span>
-      <span class="brand-subtitle">LI CHI WINES & SPIRITS</span>
+      <span class="brand-title">Ritch Wine</span>
+      <span class="brand-subtitle">禮奇酒業</span>
     </a>
 
-    <button class="nav-toggle" type="button" aria-label="Toggle navigation">
-      MENU
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="開啟選單" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
-    <div class="nav-links">
-      <a href="{{ '/about/' | relative_url }}">ABOUT</a>
-      <a href="{{ '/brands/' | relative_url }}">BRANDS</a>
-      <a href="{{ '/wines/' | relative_url }}">WINES</a>
-      <a href="{{ '/corporate/' | relative_url }}">CORPORATE</a>
-      <a href="{{ '/contact/' | relative_url }}">CONTACT</a>
+    <div class="nav-menu" id="navMenu">
+      <a href="{{ '/wines/' | relative_url }}">酒款</a>
+      <a href="{{ '/gifts/' | relative_url }}">送禮</a>
+      <a href="{{ '/dinner/' | relative_url }}">聚餐</a>
+      <a href="{{ '/selector/' | relative_url }}">選酒</a>
+      <a href="{{ '/corporate/' | relative_url }}">企業</a>
+      <a href="{{ '/contact/' | relative_url }}" class="nav-cta">詢問</a>
     </div>
   </div>
 </nav>
