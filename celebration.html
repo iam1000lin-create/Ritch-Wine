@@ -1,0 +1,106 @@
+---
+layout: default
+title: "慶祝用酒推薦｜Ritch Wine"
+description: "生日、開幕、聚會怎麼選酒？精選氣泡酒與高質感酒款，讓氣氛不出錯。"
+permalink: /celebration/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">CELEBRATION</p>
+    <h1>慶祝時刻，選一瓶有氣氛的酒</h1>
+    <p>不需要懂酒，只要選對氣氛。</p>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>慶祝選酒的三個關鍵</h2>
+      <p>重點不是複雜，而是「有感覺」。</p>
+    </div>
+
+    <div class="card-grid three">
+      <div class="info-card">
+        <h3>氣泡感</h3>
+        <p>氣泡酒能快速帶動氣氛，是最安全的慶祝選擇。</p>
+      </div>
+
+      <div class="info-card">
+        <h3>外觀與品牌</h3>
+        <p>瓶型與酒標會直接影響整體質感與儀式感。</p>
+      </div>
+
+      <div class="info-card">
+        <h3>好入口</h3>
+        <p>選擇清爽、果香型酒款，讓所有人都能接受。</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+
+    <div class="section-heading">
+      <p class="eyebrow">SELECTION</p>
+      <h2>適合慶祝的酒款</h2>
+      <p>氣泡酒與高質感酒款，讓場合自然成立。</p>
+    </div>
+
+    <div class="wine-list-grid">
+      {% for wine in site.wines %}
+        {% if wine.occasion contains "慶祝" %}
+        <a class="wine-list-card" href="{{ wine.url | relative_url }}">
+          <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
+
+          <div class="wine-list-content">
+            <span>{{ wine.brand }}</span>
+            <h4>{{ wine.title }}</h4>
+            <p>{{ wine.price }}</p>
+            <small>{{ wine.occasion }}</small>
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>常見問題</h2>
+    </div>
+
+    <h3>一定要選氣泡酒嗎？</h3>
+    <p>氣泡酒最有氣氛，但如果是正式場合，也可以選擇質感較高的紅酒或白酒。</p>
+
+    <h3>人很多要怎麼選？</h3>
+    <p>建議以氣泡酒開場，再搭配一支紅酒或白酒作為延續。</p>
+
+    <h3>預算不高也可以嗎？</h3>
+    <p>可以，重點是選擇「有感覺」的酒，而不是價格本身。</p>
+
+    <hr>
+
+    <p>延伸選擇：</p>
+    <ul>
+      <li><a href="{{ '/sparkling/' | relative_url }}">氣泡酒專區</a></li>
+      <li><a href="{{ '/gifts/' | relative_url }}">送禮怎麼選酒</a></li>
+    </ul>
+
+    <a
+      href="https://line.me/R/ti/p/YOURID?text=我想找慶祝用的酒。預算是：人數是：場合是："
+      class="btn-primary"
+      target="_blank"
+    >
+      幫我挑慶祝酒
+    </a>
+
+  </div>
+</section>

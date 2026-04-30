@@ -1,22 +1,20 @@
 <nav class="site-nav">
   <div class="nav-inner">
 
-    <!-- LOGO -->
     <a href="{{ '/' | relative_url }}" class="brand-mark">
       <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Ritch Wine">
     </a>
 
-    <!-- MENU -->
     <div class="nav-menu" id="navMenu">
       <a href="{{ '/wines/' | relative_url }}">酒款</a>
       <a href="{{ '/selector/' | relative_url }}">選酒</a>
+      <a href="{{ '/bundles/' | relative_url }}">套組</a>
       <a href="{{ '/about/' | relative_url }}">關於</a>
       <a href="{{ '/corporate/' | relative_url }}">合作</a>
       <a href="{{ '/contact/' | relative_url }}" class="nav-cta">詢問</a>
     </div>
 
-    <!-- HAMBURGER -->
-    <button class="nav-toggle" id="navToggle" aria-label="menu">
+    <button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
@@ -29,8 +27,19 @@
   const toggle = document.getElementById('navToggle');
   const menu = document.getElementById('navMenu');
 
-  toggle.addEventListener('click', () => {
-    menu.classList.toggle('is-open');
-    toggle.classList.toggle('is-open');
-  });
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('is-open');
+      toggle.classList.toggle('is-open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 </script>
