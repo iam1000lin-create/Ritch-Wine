@@ -1,35 +1,40 @@
 ---
 layout: default
-title: "聚餐葡萄酒推薦｜朋友聚會怎麼選酒？"
-description: "聚餐葡萄酒怎麼選？整理適合多人共享與搭餐的酒款選擇。"
+title: "聚餐紅酒推薦｜Ritch Wine"
+description: "朋友聚餐、家庭聚會怎麼選酒？依人數與菜色挑選不踩雷的餐酒搭配。"
 permalink: /dinner/
 ---
 
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">DINNER GUIDE</p>
-    <h1>聚餐選酒，重點是大家都喝得開心</h1>
-    <p>朋友、家人、聚會，選一瓶不會出錯的酒最重要。</p>
+    <p class="eyebrow">DINNER</p>
+    <h1>聚餐選酒，不用再怕點錯</h1>
+    <p>人多口味不同，選一瓶「大家都能接受」的酒最重要。</p>
   </div>
 </section>
 
 <section class="section section-light">
   <div class="container">
 
-    <h2>聚餐選酒重點</h2>
+    <div class="section-heading">
+      <h2>聚餐選酒的三個原則</h2>
+      <p>重點不是最特別，而是最穩定。</p>
+    </div>
 
     <div class="card-grid three">
       <div class="info-card">
         <h3>接受度高</h3>
-        <p>避免太酸或太重的風格。</p>
+        <p>避免過重單寧或極端風味，選擇圓潤平衡的酒款。</p>
       </div>
+
       <div class="info-card">
-        <h3>好搭餐</h3>
-        <p>選擇紅白都能搭的酒最安全。</p>
+        <h3>能搭多種料理</h3>
+        <p>聚餐菜色多，選擇百搭型酒款更安全。</p>
       </div>
+
       <div class="info-card">
-        <h3>氣泡酒開場</h3>
-        <p>能快速帶起氣氛。</p>
+        <h3>價格合理</h3>
+        <p>多人共享，選擇 CP 值高的酒更合適。</p>
       </div>
     </div>
 
@@ -39,26 +44,63 @@ permalink: /dinner/
 <section class="section section-dark">
   <div class="container">
 
-    <h2>適合聚餐的酒</h2>
+    <div class="section-heading">
+      <p class="eyebrow">SELECTION</p>
+      <h2>適合聚餐的酒款</h2>
+      <p>已幫你篩選過，這些是多人最不容易出錯的選擇。</p>
+    </div>
 
     <div class="wine-list-grid">
-      {% for wine in site.wines limit:6 %}
-      <a class="wine-list-card" href="{{ wine.url | relative_url }}">
-        <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
-        <div class="wine-list-content">
-          <span>{{ wine.brand }}</span>
-          <h4>{{ wine.title }}</h4>
-        </div>
-      </a>
+      {% for wine in site.wines %}
+        {% if wine.occasion contains "聚餐" %}
+        <a class="wine-list-card" href="{{ wine.url | relative_url }}">
+          <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
+
+          <div class="wine-list-content">
+            <span>{{ wine.brand }}</span>
+            <h4>{{ wine.title }}</h4>
+            <p>{{ wine.price }}</p>
+            <small>{{ wine.occasion }}</small>
+          </div>
+        </a>
+        {% endif %}
       {% endfor %}
     </div>
 
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>常見問題</h2>
+    </div>
+
+    <h3>聚餐要選紅酒還是白酒？</h3>
+    <p>不確定時建議紅酒；若有海鮮或清爽料理，白酒或氣泡酒也很適合。</p>
+
+    <h3>一桌要幾瓶？</h3>
+    <p>一般建議 4 人 1 瓶，可依飲酒習慣調整。</p>
+
+    <h3>怕大家不喜歡怎麼辦？</h3>
+    <p>選擇口感圓潤、酸度平衡的酒，通常接受度最高。</p>
+
     <hr>
 
+    <p>延伸選擇：</p>
     <ul>
-      <li><a href="{{ '/gifts/' | relative_url }}">送禮酒推薦</a></li>
-      <li><a href="{{ '/solo/' | relative_url }}">一個人喝什麼酒</a></li>
+      <li><a href="{{ '/gifts/' | relative_url }}">送禮怎麼選酒</a></li>
+      <li><a href="{{ '/wines/' | relative_url }}">查看全部酒款</a></li>
     </ul>
+
+    <a
+      href="https://line.me/R/ti/p/YOURID?text=我想找聚餐用的酒。預算是：人數是：菜色是："
+      class="btn-primary"
+      target="_blank"
+    >
+      幫我挑聚餐酒
+    </a>
 
   </div>
 </section>

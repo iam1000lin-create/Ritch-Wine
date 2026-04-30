@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "送禮紅酒推薦｜不知道怎麼選？這裡幫你挑好"
-description: "送禮紅酒怎麼選？整理適合送禮的紅酒、白酒與氣泡酒，讓你不踩雷又體面。"
+title: "送禮紅酒推薦｜Ritch Wine"
+description: "送禮不知道怎麼選？依預算與對象挑選不踩雷的紅酒、白酒與氣泡酒。"
 permalink: /gifts/
 ---
 
@@ -9,27 +9,32 @@ permalink: /gifts/
   <div class="container">
     <p class="eyebrow">GIFT GUIDE</p>
     <h1>送禮，不用再猜要買哪一瓶</h1>
-    <p>不確定對方喜歡什麼？這裡幫你整理好幾種安全又有質感的選擇。</p>
+    <p>告訴我們預算與對象，我們幫你選一瓶體面又不會出錯的酒。</p>
   </div>
 </section>
 
 <section class="section section-light">
   <div class="container">
 
-    <h2>送禮選酒的三個原則</h2>
+    <div class="section-heading">
+      <h2>送禮選酒的三個原則</h2>
+      <p>不用懂酒，只要避開錯誤就好。</p>
+    </div>
 
     <div class="card-grid three">
       <div class="info-card">
         <h3>不要太極端</h3>
-        <p>太酸或太重口味的酒，容易讓對方不習慣。</p>
+        <p>過酸或過重的酒容易踩雷，選擇平衡型更安全。</p>
       </div>
+
       <div class="info-card">
-        <h3>品牌要有辨識度</h3>
-        <p>知名酒莊會讓整體質感提升。</p>
+        <h3>品牌有辨識度</h3>
+        <p>知名酒莊會讓整體送禮質感提升。</p>
       </div>
+
       <div class="info-card">
-        <h3>外觀很重要</h3>
-        <p>酒標與瓶型會影響第一印象。</p>
+        <h3>外觀要體面</h3>
+        <p>酒標與瓶型會直接影響第一印象。</p>
       </div>
     </div>
 
@@ -40,19 +45,25 @@ permalink: /gifts/
   <div class="container">
 
     <div class="section-heading">
-      <h2>推薦送禮酒款</h2>
+      <p class="eyebrow">SELECTION</p>
+      <h2>適合送禮的酒款</h2>
+      <p>已幫你篩選過，這些都是不容易出錯的選擇。</p>
     </div>
 
     <div class="wine-list-grid">
-      {% for wine in site.wines limit:6 %}
-      <a class="wine-list-card" href="{{ wine.url | relative_url }}">
-        <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
-        <div class="wine-list-content">
-          <span>{{ wine.brand }}</span>
-          <h4>{{ wine.title }}</h4>
-          <p>{{ wine.type }}・{{ wine.region }}</p>
-        </div>
-      </a>
+      {% for wine in site.wines %}
+        {% if wine.occasion contains "送禮" %}
+        <a class="wine-list-card" href="{{ wine.url | relative_url }}">
+          <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
+
+          <div class="wine-list-content">
+            <span>{{ wine.brand }}</span>
+            <h4>{{ wine.title }}</h4>
+            <p>{{ wine.price }}</p>
+            <small>{{ wine.occasion }}</small>
+          </div>
+        </a>
+        {% endif %}
       {% endfor %}
     </div>
 
@@ -62,23 +73,34 @@ permalink: /gifts/
 <section class="section section-light">
   <div class="container">
 
-    <h2>常見問題</h2>
+    <div class="section-heading">
+      <h2>常見問題</h2>
+    </div>
 
     <h3>送紅酒會不會太正式？</h3>
-    <p>紅酒是最安全的送禮選擇之一，只要選擇口感平衡即可。</p>
+    <p>紅酒是最安全的送禮選擇之一，只要選擇口感平衡的款式即可。</p>
 
-    <h3>送禮選紅酒還是白酒？</h3>
-    <p>不確定時建議紅酒；聚餐或女性客戶白酒也適合。</p>
+    <h3>送紅酒還是白酒？</h3>
+    <p>不確定時建議紅酒；若對方偏好清爽口感或聚餐場合，白酒與氣泡酒也適合。</p>
+
+    <h3>預算怎麼抓？</h3>
+    <p>一般送禮約 NT$1000～2000 為主，依對象與場合再做調整。</p>
 
     <hr>
 
-    <p>延伸閱讀：</p>
+    <p>延伸選擇：</p>
     <ul>
       <li><a href="{{ '/dinner/' | relative_url }}">聚餐怎麼選酒</a></li>
-      <li><a href="{{ '/solo/' | relative_url }}">一個人喝什麼酒</a></li>
+      <li><a href="{{ '/wines/' | relative_url }}">查看全部酒款</a></li>
     </ul>
 
-    <a href="{{ '/contact/' | relative_url }}" class="btn-primary">詢問推薦</a>
+    <a
+      href="https://line.me/R/ti/p/YOURID?text=我想找送禮用的酒。預算是：對象是："
+      class="btn-primary"
+      target="_blank"
+    >
+      幫我挑送禮酒
+    </a>
 
   </div>
 </section>
