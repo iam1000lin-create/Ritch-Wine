@@ -67,8 +67,17 @@ layout: default
         </div>
 
         <div class="wine-actions">
-          <a href="{{ '/contact/' | relative_url }}" class="btn-primary">詢問這支酒</a>
-          <a href="{{ '/wines/' | relative_url }}" class="btn-secondary">返回酒款列表</a>
+          <a
+            href="https://line.me/R/ti/p/YOURID?text={{ '想詢問：' | append: page.title | uri_escape }}"
+            class="btn-primary"
+            target="_blank"
+          >
+            詢問這支酒
+          </a>
+
+          <a href="{{ '/wines/' | relative_url }}" class="btn-secondary">
+            返回酒款列表
+          </a>
         </div>
       </div>
 
@@ -113,7 +122,13 @@ layout: default
       若需要確認庫存、價格或搭配建議，歡迎聯繫 Ritch Wine 禮奇酒業。
     </p>
 
-    <a href="{{ '/contact/' | relative_url }}" class="btn-primary">聯絡我們</a>
+    <a
+      href="https://line.me/R/ti/p/YOURID?text={{ '想詢問：' | append: page.title | uri_escape }}"
+      class="btn-primary"
+      target="_blank"
+    >
+      用 LINE 詢問
+    </a>
   </div>
 </section>
 
