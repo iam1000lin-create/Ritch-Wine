@@ -1,70 +1,83 @@
 ---
 layout: default
-title: "精選酒款｜禮奇酒業"
-description: "禮奇酒業精選美國與法國葡萄酒，包含企業送禮紅酒、白酒、氣泡酒與餐廳酒單用酒。"
+title: "精選酒款｜Ritch Wine"
+description: "Ritch Wine 精選紅酒、白酒、氣泡酒與送禮葡萄酒。"
 permalink: /wines/
 ---
 
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">WINE PORTFOLIO</p>
+    <p class="eyebrow">WINE SELECTION</p>
     <h1>精選酒款</h1>
-    <p>
-      依照企業送禮、餐廳酒單、節慶禮盒與個人零售詢問需求，
-      精選美國與法國葡萄酒款。
-    </p>
-  </div>
-</section>
-
-<section class="section section-light">
-  <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow dark">BY STYLE</p>
-      <h2>依酒類瀏覽</h2>
-      <p>紅酒、白酒、氣泡酒與粉紅酒，適合不同送禮場合與餐酒需求。</p>
-    </div>
-
-    {% assign types = "紅酒,白酒,氣泡酒,粉紅酒" | split: "," %}
-
-    {% for type in types %}
-      {% assign filtered_wines = site.wines | where: "type", type %}
-
-      {% if filtered_wines.size > 0 %}
-      <div class="wine-category">
-        <div class="wine-category-heading">
-          <h3>{{ type }}</h3>
-          <span>{{ filtered_wines.size }} wines</span>
-        </div>
-
-        <div class="wine-list-grid">
-          {% for wine in filtered_wines %}
-          <a class="wine-list-card" href="{{ wine.url | relative_url }}">
-            <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
-            <div class="wine-list-content">
-              <span>{{ wine.brand }}</span>
-              <h4>{{ wine.title }}</h4>
-              <p>{{ wine.year }}・{{ wine.region }}</p>
-              <small>{{ wine.grapes }}</small>
-            </div>
-          </a>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-    {% endfor %}
+    <p>依照用途、預算與情境，找到適合送禮、聚餐、慶祝或日常飲用的葡萄酒。</p>
   </div>
 </section>
 
 <section class="section section-dark">
   <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">CORPORATE GIFTING</p>
-      <h2>需要企業送禮建議？</h2>
-      <p>
-        若不確定該選紅酒、白酒或氣泡酒，可依照預算、對象與送禮場合，
-        由禮奇酒業協助挑選適合的酒款。
-      </p>
-      <a href="{{ '/contact/' | relative_url }}" class="btn-primary">索取企業酒單</a>
+
+    <div class="wine-selector">
+      <p class="eyebrow">FILTER</p>
+      <h2>你想找哪一種酒？</h2>
+
+      <div class="wine-selector-group">
+        <button class="active" data-filter="all">全部</button>
+        <button data-filter="送禮">送禮</button>
+        <button data-filter="聚餐">聚餐</button>
+        <button data-filter="慶祝">慶祝</button>
+        <button data-filter="日常">日常</button>
+      </div>
     </div>
+
+    <div class="wine-list-grid">
+      {% for wine in site.wines %}
+      <a
+        class="wine-list-card"
+        href="{{ wine.url | relative_url }}"
+        data-occasion="{{ wine.occasion }}"
+      >
+        <div class="wine-list-image" style="background-image: url('{{ wine.image | relative_url }}');"></div>
+
+        <div class="wine-list-content">
+          <span>{{ wine.brand }}</span>
+          <h4>{{ wine.title }}</h4>
+          <p>{{ wine.price }}</p>
+          {% if wine.occasion %}
+          <small>{{ wine.occasion }}</small>
+          {% endif %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".wine-selector button");
+    const cards = document.querySelectorAll(".wine-list-card");
+
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        buttons.forEach(function (btn) {
+          btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+
+        cards.forEach(function (card) {
+          const occasion = card.dataset.occasion || "";
+
+          if (filter === "all" || occasion.includes(filter)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+</script>
