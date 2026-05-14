@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Ritch Wine｜葡萄酒選品"
-description: "Ritch Wine 禮奇酒業提供送禮、聚餐、日常飲用與企業採購葡萄酒選品建議。"
+description: "Ritch Wine 禮奇酒業提供送禮、聚餐、慶祝、企業採購與日常飲用的葡萄酒選品建議。"
 permalink: /
 ---
 
@@ -14,7 +14,7 @@ permalink: /
     <h1>不用懂酒，也能選到一瓶不會出錯的酒</h1>
 
     <p class="hero-copy">
-      送禮、聚餐、慶祝、自己喝。告訴我們用途與預算，
+      送禮、聚餐、慶祝、企業採購或自己喝。告訴我們用途與預算，
       我們幫你從酒庫裡挑出適合的選擇。
     </p>
 
@@ -30,7 +30,7 @@ permalink: /
     <div class="scenario-heading">
       <p class="eyebrow">START HERE</p>
       <h2>從情境開始選酒</h2>
-      <p>不用懂產區與品種，先選你要用在哪裡。</p>
+      <p>不用先懂產區與品種，先選你要用在哪裡。</p>
     </div>
 
     <div class="scenario-grid">
@@ -40,10 +40,10 @@ permalink: /
         <p>給客戶、長輩、朋友，選一瓶體面又安全的酒。</p>
       </a>
 
-      <a href="{{ '/sparkling/' | relative_url }}" class="scenario-card">
+      <a href="{{ '/celebration/' | relative_url }}" class="scenario-card">
         <span>02</span>
-        <h3>慶祝 / 氣泡酒</h3>
-        <p>開幕、生日、聚會，選一瓶有氣氛又不容易出錯的酒。</p>
+        <h3>慶祝</h3>
+        <p>生日、開幕、聚會，選一瓶有氣氛又不容易出錯的酒。</p>
       </a>
 
       <a href="{{ '/dinner/' | relative_url }}" class="scenario-card">
@@ -57,10 +57,13 @@ permalink: /
 
 <section class="section section-dark">
   <div class="container">
-    <div class="section-heading">
-      <p class="eyebrow">BUDGET</p>
-      <h2>依預算選酒</h2>
-      <p>從日常聚餐到重要送禮，都可以找到合適的選項。</p>
+    <div class="section-heading split">
+      <div>
+        <p class="eyebrow">BUDGET</p>
+        <h2>依預算選酒</h2>
+        <p>從日常聚餐到重要送禮，都可以找到合適的選項。</p>
+      </div>
+      <a href="{{ '/wines/' | relative_url }}" class="text-link dark">查看全部酒款 →</a>
     </div>
 
     <div class="card-grid three">
@@ -82,12 +85,13 @@ permalink: /
   </div>
 </section>
 
-<section class="section section-light">
+<section class="section section-light featured-section">
   <div class="container">
     <div class="section-heading split">
       <div>
         <p class="eyebrow dark">FEATURED WINES</p>
         <h2>精選酒款</h2>
+        <p>先從幾支穩定、好理解、適合多數場合的酒款開始。</p>
       </div>
 
       <a href="{{ '/wines/' | relative_url }}" class="text-link">查看全部酒款 →</a>
@@ -102,6 +106,9 @@ permalink: /
           <span>{{ wine.brand }}</span>
           <h4>{{ wine.title }}</h4>
           <p>{{ wine.price }}</p>
+          {% if wine.occasion %}
+          <small>{{ wine.occasion }}</small>
+          {% endif %}
         </div>
       </a>
       {% endfor %}
@@ -109,10 +116,39 @@ permalink: /
   </div>
 </section>
 
-<section class="section section-dark">
+<section class="section section-dark bundle-teaser">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow">RITCH WINE</p>
+      <p class="eyebrow">BUNDLE</p>
+      <h2>不想選，直接帶一組</h2>
+      <p>
+        送禮、聚餐、慶祝都可以做成套組。你只要選情境，我們幫你搭配。
+      </p>
+    </div>
+
+    <div class="card-grid three">
+      <a href="{{ '/bundles/' | relative_url }}" class="dark-card">
+        <h3>送禮雙支組</h3>
+        <p>一紅一白，安全又有質感。</p>
+      </a>
+
+      <a href="{{ '/bundles/' | relative_url }}" class="dark-card">
+        <h3>聚餐三支組</h3>
+        <p>適合多人共享，風格平衡不踩雷。</p>
+      </a>
+
+      <a href="{{ '/bundles/' | relative_url }}" class="dark-card">
+        <h3>慶祝氣泡組</h3>
+        <p>氣泡酒與搭配酒款，讓氣氛直接到位。</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow dark">RITCH WINE</p>
       <h2>不是只列酒款，而是幫你降低選錯的風險</h2>
       <p>
         我們依照用途、預算、送禮對象與餐桌情境協助選酒，
@@ -121,17 +157,20 @@ permalink: /
     </div>
 
     <div class="card-grid three">
-      <div class="dark-card">
+      <div class="info-card">
+        <span>01</span>
         <h3>送禮不失禮</h3>
         <p>挑選外觀、品牌與口感都安全的酒款。</p>
       </div>
 
-      <div class="dark-card">
-        <h3>慶祝有氣氛</h3>
-        <p>氣泡酒、粉紅酒與高質感選品，適合重要時刻。</p>
+      <div class="info-card">
+        <span>02</span>
+        <h3>聚餐不踩雷</h3>
+        <p>選擇接受度高、適合多人共享的酒。</p>
       </div>
 
-      <div class="dark-card">
+      <div class="info-card">
+        <span>03</span>
         <h3>預算更清楚</h3>
         <p>依價格帶快速找到合適選項。</p>
       </div>
@@ -139,17 +178,23 @@ permalink: /
   </div>
 </section>
 
-<section class="section section-light">
+<section class="section section-dark final-cta">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow dark">INQUIRY</p>
+      <p class="eyebrow">INQUIRY</p>
       <h2>還是不確定怎麼選？</h2>
       <p>
         告訴我們預算、用途、送禮對象或聚餐菜色，
         我們幫你挑一支不會出錯的酒。
       </p>
 
-      <a href="{{ '/contact/' | relative_url }}" class="btn-primary">詢問選酒</a>
+      <a
+        href="https://line.me/R/ti/p/YOURID?text=我想請你幫我選一支酒。預算是：用途是：對象或場合是："
+        class="btn-primary"
+        target="_blank"
+      >
+        幫我選酒
+      </a>
     </div>
   </div>
 </section>

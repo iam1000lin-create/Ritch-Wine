@@ -1112,3 +1112,40 @@ main {
     text-align: center;
   }
 }
+
+/* WINE SELECTOR */
+
+.wine-selector {
+  margin-bottom: 48px;
+}
+
+.wine-selector h2 {
+  margin-bottom: 24px;
+}
+
+.wine-selector-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.wine-selector button {
+  padding: 10px 18px;
+  border: 1px solid rgba(200,166,106,0.38);
+  background: transparent;
+  color: var(--cream);
+  font-family: inherit;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wine-selector button:hover,
+.wine-selector button.active {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.text-link.dark {
+  color: var(--gold);
+}
