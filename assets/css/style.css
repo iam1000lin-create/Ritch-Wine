@@ -1149,3 +1149,30 @@ main {
 .text-link.dark {
   color: var(--gold);
 }
+
+.scenario-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 38px;
+
+  border: 1px solid rgba(200,166,106,0.24);
+
+  color: var(--gold);
+
+  font-size: 1.5rem;
+  letter-spacing: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.01)
+    );
+
+  backdrop-filter: blur(4px);
+}
