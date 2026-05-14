@@ -449,18 +449,23 @@ main {
 .scenario-icon {
   width: 86px;
   height: 86px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   margin-bottom: 58px;
-  border: 1px solid rgba(200,166,106,0.22);
+
   color: var(--gold);
+
   font-size: 2.7rem;
-  line-height: 1;
-  letter-spacing: 0;
+
   background:
-    radial-gradient(circle at center, rgba(200,166,106,0.12), rgba(255,255,255,0.015));
-  backdrop-filter: blur(6px);
+    radial-gradient(
+      circle at center,
+      rgba(200,166,106,0.10),
+      rgba(255,255,255,0)
+    );
 }
 
 .scenario-card span {
@@ -1186,4 +1191,25 @@ main {
 
 .text-link.dark {
   color: var(--gold);
+}
+.scenario-icon {
+  border: 0;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(200,166,106,0.10),
+      rgba(255,255,255,0)
+    );
+}
+
+.budget-card {
+  position: relative;
+}
+
+.budget-icon {
+  color: var(--gold);
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 28px;
+  opacity: 0.9;
 }
